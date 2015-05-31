@@ -24,7 +24,10 @@ html {
 // ****************************************
 
 body {
-    
+    margin: 0;
+    background: url("/images/hero.jpg");
+    background-size: cover, cover;
+    background-attachment: fixed;
 }
 
 
@@ -35,14 +38,14 @@ body {
 a {
     color: $default-anchor-color;
     text-decoration: none;
-    &:visited {
-    	color: $default-anchor-color-visited;
-    }
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
-	font-weight: 700;
+	font-weight: 400;
+    font-family: $default-title-font-family;
+    letter-spacing: 0.1em;
+    color: $blue;
 }
 
 h1 { font-size: 3em; }
@@ -52,3 +55,34 @@ h4 { font-size: 1.2em; }
 
 em { font-style: italic; }
 strong { font-weight: 600; }
+
+p.em {
+    font-size: 2em;
+}
+
+
+/****************************************
+  Buttons
+*****************************************/
+
+a.button {
+    @include button;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 3em;
+    padding: 1em 4em;
+}
+
+button {
+    @extend a.button;
+}
+
+
+/****************************************
+  Selections
+*****************************************/
+
+::selection {
+    background: $blue;
+    color: #fff;
+}

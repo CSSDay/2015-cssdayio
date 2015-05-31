@@ -1,0 +1,38 @@
+section, footer {
+    position: relative;
+    text-align: center;
+
+    > div {
+        position: relative;
+
+        @include respond($desktop-breakpoint) {
+            width: $default-page-width;
+            margin: 0 auto;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+}
+
+section > div {
+        padding: 3em 1em;
+}
+
+
+
+
+// h1 {
+//     margin: 0;
+//     display: inline;
+//     //font-weight: normal;
+//     // background: linear-gradient(90deg, #B3E1EB, #E8BAD1);
+//     //   -webkit-background-clip: text;
+//     //   -moz-background-clip: text;
+//     //   -webkit-text-fill-color: transparent;
+//     //   -moz-text-fill-color: transparent;
+//     //font-family: $default-fancy-font-family;
+//     //position: absolute;
+//     //transform-origin: 70% 70%;
+//     //transform: rotate(-90deg) translate(-90%, -50%);
+// }

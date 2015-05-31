@@ -1,0 +1,30 @@
+footer {
+    margin: 2em 0;
+    color: rgba(255,255,255,0.2);
+    transition: color 0.3s;
+
+
+    > div {
+        padding-top: 1em;
+        border-top: 1px solid rgba(255,255,255,0.2);
+
+        > * + * {
+            margin-left: 5em;
+        }
+    }
+
+    &:hover {
+        color: #fff;
+    }
+
+    a {
+        color: #fff;
+    }
+
+    a.twitter {
+        background: transparent url('/images/twitter.png') no-repeat center left;
+        padding-left: 1.5em;
+        background-size: 1em;
+    }
+
+}

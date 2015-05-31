@@ -1,7 +1,111 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
 
-<div class="home">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Day</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+
+<div class="page">
+    
+    <section class="hero" id="register">
+        <div>
+
+            <header class="primary-header">
+                <div class="logo">CSS Day<span class="city">Phoenix, Arizona</span></div>
+
+                <nav class="primary-nav">
+                    <a href="#register" class="selected">Register</a>
+                    <a href="#event">Event</a>
+                    <a href="#sessions">Sessions</a>
+                    <a href="#venue">Venue</a>
+                </nav>
+            </header>
+
+            <div class="spash">
+                <h2>Advanced CSS Topics</h2>
+                <span>For experienced devs who want to level up</span>
+                <a class="button">Register</a>
+            </div>
+
+            <!-- <div class="countdown">
+                <h3 class="title">December 5th</h3>
+                <div id="main-example"></div>
+            </div> -->
+
+        </div>
+    </section>
+
+    <section class="event" id="event">
+        <div>
+            <h1>Event</h1>
+            <p class="em">
+                Already know CSS? Perfect, you're our target audience! Come level up and
+                make sense of the parts you struggle with. We'll have workshops and lectures.
+            </p>
+            <p class="date">Saturday, December 5th 2015.</p>
+        </div>
+    </section>
+
+    <section class="sessions" id="sessions">
+        <div>
+            <h1>Sessions</h1>
+            <p>
+                It's still too early for us to publish the exact list, sessions will reflect
+                advanced CSS topics such as:
+            </p>
+            <div class="session-list">
+                <div>Sass: Beyond Intermediate</div>
+                <div>PostCSS</div>
+                <div>Better Selector Strategy</div>
+                <div>CSS Tricks</div>
+                <div>CSS Methodologies</div>
+                <div>Layout Strategies</div>
+                <div>How tools like Twitter Bootstrap work under the hood</div>
+                <div>CSS Organization</div>
+                <div>A dozen tricks with Pseudo elements</div>
+                <div>CSS Namespacing / Shadow DOM</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="venue" id="venue">
+        <div>
+            <p class="em">
+                The venue is picked. We just need to iron out details before it's announced.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <span class="copy">&copy; CSS Day 2015</span>
+            <a class="twitter" href="https://twitter.com/cssdayio">cssdayio</a>
+            
+        </div>
+    </footer>
 
 </div>
+
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,200|Changa+One' rel='stylesheet' type='text/css'>
+<!-- <script src="/scripts/build.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script> -->
+
+<!--<script type="text/template" id="main-example-template">
+<div class="time <%= label %>">
+  <span class="count curr top"><%= curr %></span>
+  <span class="count next top"><%= next %></span>
+  <span class="count next bottom"><%= next %></span>
+  <span class="count curr bottom"><%= curr %></span>
+  <span class="label"><%= label.length < 6 ? label : label.substr(0, 3)  %></span>
+</div>
+</script>-->
+    
+</body>
+
+</html>

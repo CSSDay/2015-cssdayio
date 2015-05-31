@@ -1,0 +1,140 @@
+.hero {
+
+    > div {
+        height: 400px;
+        color: #fff;
+
+        @include respond(800px) {
+            height: 500px;
+        }
+    }
+
+    .spash {
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        top: 120px;
+        text-align: right;
+
+        h2 {
+            color: #C1DEE5;
+        }
+
+        span {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+    }
+
+    // Chrismas Presents
+    &::after {
+        content: '';
+        display: block;
+        height: 30vw;
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: url('/images/snow.png');
+        background-size: cover;
+        pointer-events: none; // Just in case the zindexing doesnt work
+
+        @include respond(800px) {
+            height: 400px;
+
+        }
+    }
+
+    // Countdown
+    .countdown {
+        position: absolute;
+        z-index: 3;
+        left: 40px;
+        bottom: 120px;
+    }
+
+}
+
+.primary-nav {
+    position: absolute;
+    z-index: 1000;
+    top: $gutter;
+    right: 0;
+
+    &::after {
+        content: '';
+        display: block;
+        background-color: rgba(255,255,255,0.4);
+        height: 3px;
+        border-radius: 5px;
+        position: absolute;
+        z-index: 4;
+        bottom: -3px;
+        width: 100%;
+    }
+
+    a {
+        display: inline-block;
+        padding: 10px 20px;
+        position: relative;
+
+        color: rgba(255,255,255,0.7);
+
+        &::after {
+            content: '';
+            display: block;
+            height: 3px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: -3px;
+            left: 0px;
+            right: 0px;
+            z-index: 5;
+        }
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+
+    a.selected {
+        color: #fff;
+
+        &::after {
+            background-color: #fff;
+        }
+    }
+}
+
+
+.logo {
+    position: absolute;
+    z-index: 1001;
+    left: 0;
+    top: $gutter;
+    font-size: 4em;
+    font-family: $default-title-font-family;
+    color: rgba(255,255,255,0.5);
+
+    span.city {
+        font-family: $default-fancy-font-family;
+        font-size: 1.5rem;
+        position: absolute;
+        left: 0;
+        top: 2em;
+        color: white;
+    }
+
+    span.date {
+        font-family: $default-fancy-font-family;
+        font-size: 1.5rem;
+        position: absolute;
+        left: 0;
+        top: 5em;
+        color: white;
+    }
+
+}
