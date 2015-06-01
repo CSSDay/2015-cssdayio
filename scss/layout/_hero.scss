@@ -244,7 +244,7 @@ label.primary-nav-toggle {
         }
 
 
-        a.selected {
+        a.selected, a:hover {
             color: #fff;
 
             &::after {

@@ -592,9 +592,9 @@ label.primary-nav-toggle {
         left: 0px;
         right: 0px;
         z-index: 5; }
-    .primary-nav a.selected {
+    .primary-nav a.selected, .primary-nav a:hover {
       color: #fff; }
-      .primary-nav a.selected::after {
+      .primary-nav a.selected::after, .primary-nav a:hover::after {
         background-color: #fff; } }
 
 .panel {
@@ -652,13 +652,13 @@ label.primary-nav-toggle {
 
 .venue {
   color: #fff;
-  padding-top: 140px;
+  padding-top: 160px;
   background: url('/images/flakes.png') no-repeat; }
   .venue a {
     color: #fff; }
 
 footer {
-  margin: 2em 0;
+  margin-bottom: 2em;
   color: #fff;
   opacity: 0.3;
   transition: opacity 0.3s; }
