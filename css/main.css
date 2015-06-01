@@ -612,7 +612,7 @@ label.primary-nav-toggle {
       margin-top: 0;
       margin-bottom: 0; }
     .panel > div > * + * {
-      margin-top: 2rem; }
+      margin-top: 1.5rem; }
     @media screen and (min-width: 1050px) {
       .panel > div {
         width: 960px;
