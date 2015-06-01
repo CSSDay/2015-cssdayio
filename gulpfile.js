@@ -24,8 +24,6 @@ gulp.task('server', function() {
  gulp.task('js', function() {
    return gulp.src([
          './vendor/jquery/dist/jquery.js',
-         './vendor/lodash/lodash.js',
-         './vendor/jquery.countdown/dist/jquery.countdown.js',
          './scripts/src/**/*.js'
        ])
      .pipe(concat('build.js'))
@@ -61,7 +59,7 @@ gulp.task('sass', ['normalize.css'], function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(['./vendor/*', './_scripts/src/**/*'], ['js']);
+    gulp.watch(['./vendor/*', './scripts/src/**/*.js'], ['js']);
     gulp.watch(['./scss/**/*.scss', './vendor/normalize.css/normalize.css'], ['sass']);
 });
 

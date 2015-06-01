@@ -20,9 +20,10 @@
  * Layout
  */
 
-@import "layout/scafolding";
 @import "layout/hero";
+@import "layout/panel";
 @import "layout/event";
+@import "layout/tickets";
 @import "layout/sessions";
 @import "layout/venue";
 @import "layout/footer";
@@ -31,4 +32,4 @@
 /**
  * Components
  */
-@import "components/countdown";
+

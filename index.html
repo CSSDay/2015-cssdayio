@@ -13,38 +13,30 @@
 
 <div class="page">
     
-    <section class="hero" id="register">
+    <section class="hero">
         <div>
 
             <header class="primary-header">
                 <div class="logo">CSS Day<span class="city">Phoenix, Arizona</span></div>
-
 
                 <input type="checkbox" id="primary-nav-toggle">
                 <label class="primary-nav-toggle" for="primary-nav-toggle">
                     <span class="toggle-nav">menu</span>
                 </label>
                 <nav class="primary-nav">
-                    <a href="#register" class="selected">Register</a>
                     <a href="#event">Event</a>
+                    <a href="#tickets">Tickets</a>
                     <a href="#sessions">Sessions</a>
                     <a href="#venue">Venue</a>
-                    <!-- <a href="/questions.html">Questions</a> -->
                 </nav>
-
 
             </header>
 
             <div class="spash">
-                <h2>Advanced CSS Topics</h2>
+                <h1 class="title">Advanced CSS Topics</h1>
                 <span>For experienced devs who want to level up</span>
-                <a class="button">Register</a>
+                <a class="button" href="https://www.eventbrite.com/e/cssdayio-tickets-6612142095">Tickets</a>
             </div>
-
-            <!-- <div class="countdown">
-                <h3 class="title">December 5th</h3>
-                <div id="main-example"></div>
-            </div> -->
 
         </div>
     </section>
@@ -53,12 +45,31 @@
         <div>
             <h1>Event</h1>
             <p class="em">
-                Already know CSS? Perfect, you're our target audience. Come level up and
+                Already know CSS? Perfect, you're our target audience. Come level-up and
                 make sense of the parts you struggle with. We'll have intermediate to
                 advanced lectures all day!
             </p>
             <h3 class="date">Saturday, December 5th 2015.</h3>
-            <a href="" class="button">Register</a>
+        </div>
+    </section>
+
+    <section class="panel tickets" id="tickets">
+        <div>
+            <h1>Tickets</h1>
+            <p class="em">Tickets will be available June 1st at 4:00 PM</p> 
+            
+            <a class="button" href="https://www.eventbrite.com/e/cssdayio-tickets-6612142095">Tickets</a>
+
+            <p>
+                <strong>Want a free t-shirt?</strong> When tickets are avaialble,
+                the first 20 attendees will get a free CSS Day t-shirt with the
+                purchase of a <em>Door's Open</em> ticket. Do you Twitter? Tweets
+                about your free t-shirt are much appreciated. 
+            </p>
+            <p>
+                <strong>Early Bird</strong> reduced ticket prices will only availble
+                while supplies last.
+            </p>
         </div>
     </section>
 
@@ -66,7 +77,8 @@
         <div>
             <h1>Sessions</h1>
             <p>
-                It's still too early for us to publish the exact list, sessions will reflect
+                It's still too early for us to publish the exact list. Stay tuned to this
+                website and twitter announcements for details. However, sessions will reflect
                 advanced CSS topics such as:
             </p>
             <div class="session-list">
@@ -82,7 +94,7 @@
                 <div>CSS Namespacing / Shadow DOM</div>
                 <div>CSS Workflows</div>
             </div>
-
+            <p>Want to speak? <a href="mailto:event@cssday.io">Let us know...</a></p>
         </div>
     </section>
 
@@ -100,11 +112,8 @@
 
     <footer class="panel">
         <div>
-            <span class="copy">&copy; CSS Day 2015</span>
-            <span>
-                <a class="twitter" href="https://twitter.com/cssdayio">cssdayio</a> |
-                <a href="mailto:event@cssday.io">Email us</a>
-                <!-- <a href="/questions.html">Questions</a> -->
+            <span>&copy; CSS Day 2015 | <a href="mailto:event@cssday.io">Email us</a></span>
+            <a class="twitter" href="https://twitter.com/cssdayio">cssdayio</a>
             </span>
         </div>
     </footer>
@@ -112,20 +121,8 @@
 </div>
 
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,200|Changa+One' rel='stylesheet' type='text/css'>
+<script src="/scripts/build.min.js"></script>
 
-
-<!-- <script src="/scripts/build.min.js"></script>
-
-<script type="text/template" id="main-example-template">
-<div class="time <%= label %>">
-  <span class="count curr top"><%= curr %></span>
-  <span class="count next top"><%= next %></span>
-  <span class="count next bottom"><%= next %></span>
-  <span class="count curr bottom"><%= curr %></span>
-  <span class="label"><%= label.length < 6 ? label : label.substr(0, 3)  %></span>
-</div>
-</script>-->
-    
 </body>
 
 </html>

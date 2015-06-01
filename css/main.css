@@ -325,8 +325,8 @@ td, th {
 
 html {
   box-sizing: border-box;
-  color: #aaa;
-  font: 12pt 'Raleway', Arial;
+  color: #888;
+  font: 16pt 'Raleway', Arial;
   font-weight: 200; }
 
 *, *::before, *::after {
@@ -352,28 +352,27 @@ h1, h2, h3, h4, h5, h6 {
   color: #31AFCB; }
 
 h1 {
-  font-size: 3em; }
+  font-size: 2em; }
 
 h2 {
-  font-size: 2em; }
+  font-size: 1em; }
 
 h3 {
   font-size: 1.5em; }
-
-h4 {
-  font-size: 1.2em; }
 
 em {
   font-style: italic; }
 
 strong {
-  font-weight: 600; }
+  font-weight: 600;
+  color: #bd548b; }
 
-p.em {
-  font-size: 2em; }
-
-p a {
-  text-decoration: underline; }
+p {
+  line-height: 1.5em; }
+  p.em {
+    font-size: 1.5em; }
+  p a {
+    text-decoration: underline; }
 
 /****************************************
   Buttons
@@ -387,14 +386,18 @@ a.button, button {
   padding: 5px 15px;
   outline: 0;
   display: inline-block;
-  color: #fff;
-  border: 1px solid #fff;
+  color: #31AFCB;
+  border: 1px solid currentColor;
   border-radius: 3em;
   padding: 1em 4em; }
   a.button::-moz-focus-inner, button::-moz-focus-inner {
     border: 0; }
   a.button:hover, button:hover {
     outline: 0; }
+  a.button:hover, button:hover {
+    background-color: #31AFCB;
+    color: #fff;
+    border-color: #31AFCB; }
 
 /****************************************
   Selections
@@ -409,19 +412,6 @@ a.button, button {
 /**
  * Layout
  */
-.panel {
-  position: relative;
-  text-align: center;
-  padding: 3em 1em; }
-  .panel > div {
-    position: relative; }
-    @media screen and (min-width: 1050px) {
-      .panel > div {
-        width: 960px;
-        margin: 0 auto;
-        padding-left: 0;
-        padding-right: 0; } }
-
 .hero {
   position: relative; }
   .hero > div {
@@ -441,12 +431,20 @@ a.button, button {
     right: 0;
     top: 100px;
     text-align: right; }
-    .hero .spash h2 {
-      color: #C1DEE5; }
+    .hero .spash .title {
+      color: #C1DEE5;
+      font-size: 1.6em; }
     .hero .spash span {
+      font-size: 0.8em;
       display: block;
       margin-top: 10px;
       margin-bottom: 30px; }
+    .hero .spash .button {
+      color: #fff; }
+      .hero .spash .button:hover {
+        background-color: #fff;
+        border-color: #fff;
+        color: #31AFCB; }
     @media screen and (min-width: 800px) {
       .hero .spash {
         display: block; } }
@@ -474,14 +472,14 @@ a.button, button {
 .logo {
   display: inline-block;
   position: relative;
-  font-size: 4em;
+  font-size: 3em;
   font-family: 'Changa One', Arial;
   color: rgba(255, 255, 255, 0.5); }
   .logo span.city {
-    font-size: 1.5rem;
+    font-size: 1rem;
     position: absolute;
     left: 0;
-    top: 2.3em;
+    top: 2.7em;
     color: #fff; }
 
 label.primary-nav-toggle {
@@ -508,7 +506,7 @@ label.primary-nav-toggle {
 
 .primary-nav {
   overflow: hidden;
-  font-size: 2.5em;
+  font-size: 2em;
   position: fixed;
   z-index: 1001;
   top: 1em;
@@ -599,15 +597,39 @@ label.primary-nav-toggle {
       .primary-nav a.selected::after {
         background-color: #fff; } }
 
-section.event {
-  background: linear-gradient(#fff, #eee); }
-  section.event p {
-    line-height: 1.5em; }
-  section.event .date {
+.panel {
+  position: relative;
+  text-align: center;
+  padding: 2em 1em; }
+  .panel > div {
+    position: relative;
+    /**
+	 * Apply to containers to get nice gutters between vertical items
+	 *
+	 * More Details: https://www.youtube.com/watch?v=w4skJXB03Ho&noredirect=1
+	 */ }
+    .panel > div > * {
+      margin-top: 0;
+      margin-bottom: 0; }
+    .panel > div > * + * {
+      margin-top: 2rem; }
+    @media screen and (min-width: 1050px) {
+      .panel > div {
+        width: 960px;
+        margin: 0 auto;
+        padding-left: 0;
+        padding-right: 0; } }
+
+.panel.event {
+  background: linear-gradient(#fff, #fafafa); }
+  .panel.event .date {
     color: #bd548b; }
 
-section.sessions {
-  background: linear-gradient(#eee, #fff); }
+.panel.tickets {
+  background-color: #fafafa; }
+
+.panel.sessions {
+  background: linear-gradient(#fafafa, #fff); }
 
 .session-list {
   margin-top: 2em; }
@@ -657,97 +679,3 @@ footer {
 /**
  * Components
  */
-.countdown .title {
-  color: #fff;
-  margin-bottom: 10px; }
-.countdown .time {
-  border-radius: 5px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-  display: inline-block;
-  text-align: center;
-  position: relative;
-  height: 80px;
-  width: 65px;
-  -webkit-perspective: 500px;
-          perspective: 500px;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0); }
-.countdown .count {
-  background: #202020;
-  color: #f8f8f8;
-  display: block;
-  font-family: 'Oswald', sans-serif;
-  font-size: 2em;
-  line-height: 2.4em;
-  overflow: hidden;
-  position: absolute;
-  text-align: center;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-  top: 0;
-  width: 100%;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
-  -webkit-transform-style: flat;
-          transform-style: flat; }
-.countdown .count.top {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 5px 5px 0 0;
-  height: 50%;
-  -webkit-transform-origin: 50% 100%;
-      -ms-transform-origin: 50% 100%;
-          transform-origin: 50% 100%; }
-.countdown .count.bottom {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.1), transparent);
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-  border-radius: 0 0 5px 5px;
-  line-height: 0;
-  height: 50%;
-  top: 50%;
-  -webkit-transform-origin: 50% 0;
-      -ms-transform-origin: 50% 0;
-          transform-origin: 50% 0; }
-.countdown .label {
-  margin-top: 5px;
-  display: block;
-  position: absolute;
-  top: 80px;
-  width: 100%;
-  font-size: normal;
-  text-shadow: 0 0 3px #000; }
-.countdown .count.curr.top {
-  -webkit-transform: rotateX(0deg);
-          transform: rotateX(0deg);
-  z-index: 3; }
-.countdown .count.next.bottom {
-  -webkit-transform: rotateX(90deg);
-          transform: rotateX(90deg);
-  z-index: 2; }
-.countdown .flip .count.curr.top {
-  transition: all 250ms ease-in-out;
-  -webkit-transform: rotateX(-90deg);
-          transform: rotateX(-90deg); }
-.countdown .flip .count.next.bottom {
-  transition: all 250ms ease-in-out 250ms;
-  -webkit-transform: rotateX(0deg);
-          transform: rotateX(0deg); }
-
-@media screen and (max-width: 48em) {
-  .countdown {
-    width: 100%; }
-    .countdown .countdown-container {
-      height: 100px; }
-    .countdown .time {
-      height: 70px;
-      width: 48px; }
-    .countdown .count {
-      font-size: 1.5em;
-      line-height: 70px; }
-    .countdown .label {
-      font-size: 0.8em;
-      top: 72px; } }

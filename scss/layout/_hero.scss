@@ -22,14 +22,25 @@
         top: 100px;
         text-align: right;
 
-        h2 {
+        .title {
             color: #C1DEE5;
+            font-size: 1.6em;
         }
 
         span {
+            font-size: 0.8em;
             display: block;
             margin-top: 10px;
             margin-bottom: 30px;
+        }
+
+        .button {
+            color: #fff;
+            &:hover {
+                background-color: #fff;
+                border-color: #fff;
+                color: $blue;
+            }
         }
 
         @include respond(800px) {
@@ -69,15 +80,15 @@
 .logo {
     display: inline-block;
     position: relative;
-    font-size: 4em;
+    font-size: 3em;
     font-family: $default-title-font-family;
     color: rgba(255,255,255,0.5);
 
     span.city {
-        font-size: 1.5rem;
+        font-size: 1rem;
         position: absolute;
         left: 0;
-        top: 2.3em;
+        top: 2.7em;
         color: #fff;
     }
 
@@ -121,7 +132,7 @@ label.primary-nav-toggle {
 
 .primary-nav {
     overflow: hidden;
-    font-size: 2.5em;
+    font-size: 2em;
     position: fixed;
     z-index: 1001;
     top: 1em;

@@ -1,10 +1,6 @@
-section.event {
+.panel.event {
     background: linear-gradient(#fff, $section-bg-color);
     
-    p {
-        line-height: 1.5em;
-    }
-
     .date {
         color: $pink;
     }

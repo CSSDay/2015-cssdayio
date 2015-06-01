@@ -1,10 +1,11 @@
 .panel {
     position: relative;
     text-align: center;
-    padding: 3em 1em;
+    padding: 2em 1em;
 
     > div {
         position: relative;
+        @include vertical-gutters($gutter);
 
         @include respond($desktop-breakpoint) {
             width: $default-page-width;

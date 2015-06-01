@@ -48,21 +48,21 @@ h1, h2, h3, h4, h5, h6 {
     color: $blue;
 }
 
-h1 { font-size: 3em; }
-h2 { font-size: 2em; }
+h1 { font-size: 2em; }
+h2 { font-size: 1em; }
 h3 { font-size: 1.5em; }
-h4 { font-size: 1.2em; }
 
 em { font-style: italic; }
-strong { font-weight: 600; }
+strong { font-weight: 600; color: $pink; }
 
-p.em {
-    font-size: 2em;
+p {
+    line-height: 1.5em;
+
+    &.em { font-size: 1.5em; }
+    a { text-decoration: underline; }
 }
 
-p a {
-    text-decoration: underline;
-}
+
 
 
 /****************************************
@@ -71,10 +71,16 @@ p a {
 
 a.button {
     @include button;
-    color: #fff;
-    border: 1px solid #fff;
+    color: $blue;
+    border: 1px solid currentColor;
     border-radius: 3em;
     padding: 1em 4em;
+
+    &:hover {
+        background-color: $blue;
+        color: #fff;
+        border-color: $blue;
+    }
 }
 
 button {
