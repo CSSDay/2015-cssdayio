@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CSS Day</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main.min.css">
 </head>
 
 <body>
@@ -19,12 +19,20 @@
             <header class="primary-header">
                 <div class="logo">CSS Day<span class="city">Phoenix, Arizona</span></div>
 
+
+                <input type="checkbox" id="primary-nav-toggle">
+                <label class="primary-nav-toggle" for="primary-nav-toggle">
+                    <span class="toggle-nav">menu</span>
+                </label>
                 <nav class="primary-nav">
                     <a href="#register" class="selected">Register</a>
                     <a href="#event">Event</a>
                     <a href="#sessions">Sessions</a>
                     <a href="#venue">Venue</a>
+                    <!-- <a href="/questions.html">Questions</a> -->
                 </nav>
+
+
             </header>
 
             <div class="spash">
@@ -41,18 +49,20 @@
         </div>
     </section>
 
-    <section class="event" id="event">
+    <section class="panel event" id="event">
         <div>
             <h1>Event</h1>
             <p class="em">
-                Already know CSS? Perfect, you're our target audience! Come level up and
-                make sense of the parts you struggle with. We'll have workshops and lectures.
+                Already know CSS? Perfect, you're our target audience. Come level up and
+                make sense of the parts you struggle with. We'll have intermediate to
+                advanced lectures all day!
             </p>
-            <p class="date">Saturday, December 5th 2015.</p>
+            <h3 class="date">Saturday, December 5th 2015.</h3>
+            <a href="" class="button">Register</a>
         </div>
     </section>
 
-    <section class="sessions" id="sessions">
+    <section class="panel sessions" id="sessions">
         <div>
             <h1>Sessions</h1>
             <p>
@@ -66,37 +76,46 @@
                 <div>CSS Tricks</div>
                 <div>CSS Methodologies</div>
                 <div>Layout Strategies</div>
-                <div>How tools like Twitter Bootstrap work under the hood</div>
+                <div>Twitter Bootstrap: Under the hood</div>
                 <div>CSS Organization</div>
                 <div>A dozen tricks with Pseudo elements</div>
                 <div>CSS Namespacing / Shadow DOM</div>
             </div>
+
         </div>
     </section>
 
-    <section class="venue" id="venue">
+    <section class="panel venue" id="venue">
         <div>
             <p class="em">
-                The venue is picked. We just need to iron out details before it's announced.
+                The venue is picked, we just need to iron out details before it's announced.
+                And by the way it's amazing!
+            </p>
+            <p>
+                Want to help plan, speak at, or sponsor the event? Email <a href="mailto:event@cssday.io">event@cssday.io</a>
             </p>
         </div>
     </section>
 
-    <footer>
+    <footer class="panel">
         <div>
             <span class="copy">&copy; CSS Day 2015</span>
-            <a class="twitter" href="https://twitter.com/cssdayio">cssdayio</a>
-            
+            <span>
+                <a class="twitter" href="https://twitter.com/cssdayio">cssdayio</a> |
+                <a href="mailto:event@cssday.io">Contact</a> |
+                <!-- <a href="/questions.html">Questions</a> -->
+            </span>
         </div>
     </footer>
 
 </div>
 
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,200|Changa+One' rel='stylesheet' type='text/css'>
-<!-- <script src="/scripts/build.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script> -->
 
-<!--<script type="text/template" id="main-example-template">
+
+<!-- <script src="/scripts/build.min.js"></script>
+
+<script type="text/template" id="main-example-template">
 <div class="time <%= label %>">
   <span class="count curr top"><%= curr %></span>
   <span class="count next top"><%= next %></span>

@@ -336,8 +336,8 @@ html {
 
 body {
   margin: 0;
-  background: url("/images/hero.jpg");
-  background-size: cover, cover;
+  background: #31AFCB url("/images/hero.jpg") no-repeat center top;
+  background-size: cover;
   background-attachment: fixed; }
 
 a {
@@ -371,6 +371,9 @@ strong {
 
 p.em {
   font-size: 2em; }
+
+p a {
+  text-decoration: underline; }
 
 /****************************************
   Buttons
@@ -406,119 +409,195 @@ a.button, button {
 /**
  * Layout
  */
-section, footer {
+.panel {
   position: relative;
-  text-align: center; }
-  section > div, footer > div {
+  text-align: center;
+  padding: 3em 1em; }
+  .panel > div {
     position: relative; }
     @media screen and (min-width: 1050px) {
-      section > div, footer > div {
+      .panel > div {
         width: 960px;
         margin: 0 auto;
         padding-left: 0;
         padding-right: 0; } }
 
-section > div {
-  padding: 3em 1em; }
-
-.hero > div {
-  height: 400px;
-  color: #fff; }
-  @media screen and (min-width: 800px) {
-    .hero > div {
-      height: 500px; } }
-.hero .spash {
-  position: absolute;
-  z-index: 2;
-  right: 0;
-  top: 120px;
-  text-align: right; }
-  .hero .spash h2 {
-    color: #C1DEE5; }
-  .hero .spash span {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 30px; }
-.hero::after {
-  content: '';
-  display: block;
-  height: 30vw;
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: url('/images/snow.png');
-  background-size: cover;
-  pointer-events: none; }
-  @media screen and (min-width: 800px) {
-    .hero::after {
-      height: 400px; } }
-.hero .countdown {
-  position: absolute;
-  z-index: 3;
-  left: 40px;
-  bottom: 120px; }
-
-.primary-nav {
-  position: absolute;
-  z-index: 1000;
-  top: 0.7rem;
-  right: 0; }
-  .primary-nav::after {
+.hero {
+  position: relative; }
+  .hero > div {
+    margin: 0 2em;
+    position: relative;
+    height: 450px;
+    color: #fff; }
+    @media screen and (min-width: 1050px) {
+      .hero > div {
+        width: 960px;
+        margin: 0 auto;
+        height: 500px; } }
+  .hero .spash {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 100px;
+    text-align: right; }
+    .hero .spash h2 {
+      color: #C1DEE5; }
+    .hero .spash span {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 30px; }
+    @media screen and (min-width: 800px) {
+      .hero .spash {
+        display: block; } }
+  .hero::after {
     content: '';
     display: block;
-    background-color: rgba(255, 255, 255, 0.4);
-    height: 3px;
-    border-radius: 5px;
+    height: 310px;
     position: absolute;
-    z-index: 4;
-    bottom: -3px;
-    width: 100%; }
-  .primary-nav a {
-    display: inline-block;
-    padding: 10px 20px;
-    position: relative;
-    color: rgba(255, 255, 255, 0.7); }
-    .primary-nav a::after {
-      content: '';
-      display: block;
-      height: 3px;
-      border-radius: 5px;
-      position: absolute;
-      bottom: -3px;
-      left: 0px;
-      right: 0px;
-      z-index: 5; }
-    .primary-nav a:hover {
-      color: #fff; }
-  .primary-nav a.selected {
-    color: #fff; }
-    .primary-nav a.selected::after {
-      background-color: #fff; }
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('/images/snow.png') no-repeat bottom left;
+    background-size: cover;
+    pointer-events: none; }
+    @media screen and (min-width: 1050px) {
+      .hero::after {
+        height: 400px; } }
+  .hero .countdown {
+    position: absolute;
+    z-index: 3;
+    left: 40px;
+    bottom: 120px; }
 
 .logo {
-  position: absolute;
-  z-index: 1001;
-  left: 0;
-  top: 0.7rem;
+  display: inline-block;
+  position: relative;
   font-size: 4em;
   font-family: 'Changa One', Arial;
   color: rgba(255, 255, 255, 0.5); }
   .logo span.city {
-    font-family: 'Courgette', cursive;
     font-size: 1.5rem;
     position: absolute;
     left: 0;
-    top: 2em;
-    color: white; }
-  .logo span.date {
-    font-family: 'Courgette', cursive;
-    font-size: 1.5rem;
-    position: absolute;
+    top: 2.3em;
+    color: #fff; }
+
+label.primary-nav-toggle {
+  display: block;
+  transition: background-color 1s;
+  background-color: rgba(0, 0, 0, 0); }
+  label.primary-nav-toggle .toggle-nav {
+    position: fixed;
+    z-index: 1000;
+    top: 1em;
+    right: 1em;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid rgba(189, 84, 139, 0.2);
+    transition: -webkit-transform 1.6s;
+    transition: transform 1.6s;
+    text-align: center;
+    font-size: 0.7em;
+    color: #bd548b;
+    padding-top: 15px;
+    border-radius: 50%;
+    cursor: pointer; }
+
+.primary-nav {
+  overflow: hidden;
+  font-size: 2.5em;
+  position: fixed;
+  z-index: 1001;
+  top: 1em;
+  right: 1em;
+  left: 1em;
+  background-color: #fff;
+  border-radius: 0.3em;
+  text-align: center;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  -webkit-transform: perspective(1000px) rotateY(-90deg);
+          transform: perspective(1000px) rotateY(-90deg);
+  -webkit-transform-origin: 120%;
+      -ms-transform-origin: 120%;
+          transform-origin: 120%; }
+  .primary-nav a {
+    display: block;
+    padding: 0.3em 0; }
+    .primary-nav a:active {
+      background-color: #bd548b;
+      color: #fff; }
+
+#primary-nav-toggle {
+  display: none; }
+  #primary-nav-toggle:checked + label.primary-nav-toggle {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
-    top: 5em;
-    color: white; }
+    background-color: rgba(0, 0, 0, 0.6); }
+    #primary-nav-toggle:checked + label.primary-nav-toggle .toggle-nav {
+      -webkit-transform: translateX(500px);
+          -ms-transform: translateX(500px);
+              transform: translateX(500px); }
+  #primary-nav-toggle:checked ~ .primary-nav {
+    -webkit-transform: perspective(1000px) rotateY(0);
+            transform: perspective(1000px) rotateY(0); }
+
+@media screen and (min-width: 800px) {
+  label.primary-nav-toggle {
+    display: none; }
+  .primary-nav {
+    overflow: visible;
+    left: auto;
+    background-color: transparent;
+    font-size: 1em;
+    position: absolute;
+    transition: none;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    -webkit-transform-origin: 0;
+        -ms-transform-origin: 0;
+            transform-origin: 0; }
+    .primary-nav::after {
+      content: '';
+      display: block;
+      background-color: rgba(255, 255, 255, 0.4);
+      height: 3px;
+      border-radius: 5px;
+      position: absolute;
+      z-index: 4;
+      bottom: -3px;
+      width: 100%; }
+    .primary-nav a {
+      display: inline-block;
+      padding: 10px 20px;
+      position: relative;
+      color: rgba(255, 255, 255, 0.7); }
+      .primary-nav a:active {
+        background-color: transparent; }
+      .primary-nav a:hover {
+        color: #fff; }
+      .primary-nav a::after {
+        content: '';
+        display: block;
+        height: 3px;
+        border-radius: 5px;
+        position: absolute;
+        bottom: -3px;
+        left: 0px;
+        right: 0px;
+        z-index: 5; }
+    .primary-nav a.selected {
+      color: #fff; }
+      .primary-nav a.selected::after {
+        background-color: #fff; } }
 
 section.event {
   background: linear-gradient(#fff, #eee); }
@@ -531,10 +610,17 @@ section.sessions {
   background: linear-gradient(#eee, #fff); }
 
 .session-list {
-  -webkit-column-count: 3;
-     -moz-column-count: 3;
-          column-count: 3;
   margin-top: 2em; }
+  @media screen and (min-width: 800px) {
+    .session-list {
+      -webkit-column-count: 2;
+         -moz-column-count: 2;
+              column-count: 2; } }
+  @media screen and (min-width: 1050px) {
+    .session-list {
+      -webkit-column-count: 3;
+         -moz-column-count: 3;
+              column-count: 3; } }
   .session-list div {
     display: block;
     font-size: 1.5em;
@@ -544,22 +630,25 @@ section.sessions {
 
 .venue {
   color: #fff;
-  padding-top: 100px;
+  padding-top: 140px;
   background: url('/images/flakes.png') no-repeat; }
+  .venue a {
+    color: #fff; }
 
 footer {
   margin: 2em 0;
-  color: rgba(255, 255, 255, 0.2);
-  transition: color 0.3s; }
+  color: #fff;
+  opacity: 0.3;
+  transition: opacity 0.3s; }
+  footer a {
+    color: #fff; }
   footer > div {
     padding-top: 1em;
-    border-top: 1px solid rgba(255, 255, 255, 0.2); }
+    border-top: 1px solid rgba(255, 255, 255, 0.4); }
     footer > div > * + * {
       margin-left: 5em; }
   footer:hover {
-    color: #fff; }
-  footer a {
-    color: #fff; }
+    opacity: 1; }
   footer a.twitter {
     background: transparent url('/images/twitter.png') no-repeat center left;
     padding-left: 1.5em;

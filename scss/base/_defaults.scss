@@ -25,8 +25,8 @@ html {
 
 body {
     margin: 0;
-    background: url("/images/hero.jpg");
-    background-size: cover, cover;
+    background: $blue url("/images/hero.jpg") no-repeat center top;
+    background-size: cover;
     background-attachment: fixed;
 }
 
@@ -58,6 +58,10 @@ strong { font-weight: 600; }
 
 p.em {
     font-size: 2em;
+}
+
+p a {
+    text-decoration: underline;
 }
 
 

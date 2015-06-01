@@ -1,12 +1,14 @@
 footer {
     margin: 2em 0;
-    color: rgba(255,255,255,0.2);
-    transition: color 0.3s;
-
+    color: #fff;
+    opacity: 0.3;
+    transition: opacity 0.3s;
+    
+    a { color: #fff; }
 
     > div {
         padding-top: 1em;
-        border-top: 1px solid rgba(255,255,255,0.2);
+        border-top: 1px solid rgba(255,255,255,0.4);
 
         > * + * {
             margin-left: 5em;
@@ -14,11 +16,7 @@ footer {
     }
 
     &:hover {
-        color: #fff;
-    }
-
-    a {
-        color: #fff;
+        opacity: 1;
     }
 
     a.twitter {

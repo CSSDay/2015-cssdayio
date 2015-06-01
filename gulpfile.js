@@ -1,10 +1,13 @@
+'use strict';
+
 var gulp        = require('gulp');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
+var minifyCss   = require('gulp-minify-css');
 var rename      = require('gulp-rename');
 var concat      = require('gulp-concat');
 var uglify      = require('gulp-uglify');
-var connect = require('connect');
+var connect     = require('connect');
 var serveStatic = require('serve-static');
 
 /**
@@ -21,6 +24,7 @@ gulp.task('server', function() {
  gulp.task('js', function() {
    return gulp.src([
          './vendor/jquery/dist/jquery.js',
+         './vendor/lodash/lodash.js',
          './vendor/jquery.countdown/dist/jquery.countdown.js',
          './scripts/src/**/*.js'
        ])
@@ -46,9 +50,13 @@ gulp.task('normalize.css', function() {
 gulp.task('sass', ['normalize.css'], function () {
     return gulp.src('./scss/main.scss')
         .pipe(sass({
-            includePaths: ['scss']
+            includePaths: ['scss'],
+            errLogToConsole: true
         }))
-        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8']))
+        .pipe(gulp.dest('./css'))
+        .pipe(minifyCss({compatibility: 'ie8'}))
+        .pipe(rename('main.min.css'))
         .pipe(gulp.dest('./css'));
 });
 
@@ -57,4 +65,4 @@ gulp.task('watch', function () {
     gulp.watch(['./scss/**/*.scss', './vendor/normalize.css/normalize.css'], ['sass']);
 });
 
-gulp.task('default', ['watch', 'server']);
+gulp.task('default', ['sass', 'js', 'watch', 'server']);

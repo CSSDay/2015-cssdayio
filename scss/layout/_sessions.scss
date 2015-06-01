@@ -2,9 +2,11 @@ section.sessions {
     background: linear-gradient($section-bg-color, #fff);
 }
 
-.session-list {
-    column-count: 3;
+.session-list {    
     margin-top: 2em;
+
+    @include respond(800px) { column-count: 2; }
+    @include respond($desktop-breakpoint) { column-count: 3; }
 
     div {
         display: block;
@@ -14,8 +16,6 @@ section.sessions {
         column-break-inside : avoid;
     }
 }
-
-
 
 
 
@@ -45,5 +45,4 @@ section.sessions {
 
 //     }
     
-
 // }

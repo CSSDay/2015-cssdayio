@@ -1,6 +1,7 @@
-section, footer {
+.panel {
     position: relative;
     text-align: center;
+    padding: 3em 1em;
 
     > div {
         position: relative;
@@ -13,10 +14,6 @@ section, footer {
         }
     }
 
-}
-
-section > div {
-        padding: 3em 1em;
 }
 
 
