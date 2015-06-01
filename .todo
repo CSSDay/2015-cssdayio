@@ -3,3 +3,4 @@
 - Stress test
 - consider making the snow pic a non ::after
 - test event@cssday.io
+- make the ".selected" of nav do something
