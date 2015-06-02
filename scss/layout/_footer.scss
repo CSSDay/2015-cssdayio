@@ -3,6 +3,7 @@ footer {
     color: #fff;
     opacity: 0.3;
     transition: opacity 0.3s;
+    font-size: 0.6em;
     
     a { color: #fff; }
 
@@ -23,6 +24,10 @@ footer {
         background: transparent url('/images/twitter.png') no-repeat center left;
         padding-left: 1.5em;
         background-size: 1em;
+    }
+
+    @include respond(600px) {
+        font-size: 1em;
     }
 
 }
