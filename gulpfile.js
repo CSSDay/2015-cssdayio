@@ -23,7 +23,7 @@ gulp.task('server', function() {
  */
  gulp.task('js', function() {
    return gulp.src([
-         './vendor/jquery/dist/jquery.js',
+         //'./vendor/jquery/dist/jquery.js',
          './scripts/src/**/*.js'
        ])
      .pipe(concat('build.js'))
