@@ -612,7 +612,7 @@ label.primary-nav-toggle {
       margin-top: 0;
       margin-bottom: 0; }
     .panel > div > * + * {
-      margin-top: 2rem; }
+      margin-top: 1.5rem; }
     @media screen and (min-width: 1050px) {
       .panel > div {
         width: 960px;
@@ -652,8 +652,8 @@ label.primary-nav-toggle {
 
 .venue {
   color: #fff;
-  padding-top: 160px;
-  background: url('/images/flakes.png') no-repeat; }
+  padding-top: 100px;
+  background: url('/images/flakes.png') repeat-x; }
   .venue a {
     color: #fff; }
 
@@ -661,7 +661,8 @@ footer {
   margin-bottom: 2em;
   color: #fff;
   opacity: 0.3;
-  transition: opacity 0.3s; }
+  transition: opacity 0.3s;
+  font-size: 0.6em; }
   footer a {
     color: #fff; }
   footer > div {
@@ -675,6 +676,9 @@ footer {
     background: transparent url('/images/twitter.png') no-repeat center left;
     padding-left: 1.5em;
     background-size: 1em; }
+  @media screen and (min-width: 600px) {
+    footer {
+      font-size: 1em; } }
 
 /**
  * Components
