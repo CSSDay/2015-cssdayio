@@ -20,12 +20,6 @@ footer {
         opacity: 1;
     }
 
-    a.twitter {
-        background: transparent url('/images/twitter.png') no-repeat center left;
-        padding-left: 1.5em;
-        background-size: 1em;
-    }
-
     @include respond(600px) {
         font-size: 1em;
     }
