@@ -424,8 +424,6 @@ a.button, button {
     position: relative;
     height: 450px;
     color: #fff; }
-    .hero > div a {
-      color: #fff; }
     @media screen and (min-width: 1050px) {
       .hero > div {
         width: 960px;
@@ -536,6 +534,7 @@ label.primary-nav-toggle {
       -ms-transform-origin: 120%;
           transform-origin: 120%; }
   .primary-nav a {
+    color: #31AFCB;
     display: block;
     padding: 0.3em 0; }
     .primary-nav a:active {

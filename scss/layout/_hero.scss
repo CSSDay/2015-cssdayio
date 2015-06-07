@@ -6,7 +6,6 @@
         position: relative;
         height: 450px;
         color: #fff;
-        a { color: #fff; }
 
         @include respond($desktop-breakpoint) {
             width: $default-page-width;
@@ -103,15 +102,6 @@
 
 }
 
-
-
-
-
-
-
-
-
-
 label.primary-nav-toggle {
     display: block;
     transition: background-color 1s;
@@ -138,7 +128,6 @@ label.primary-nav-toggle {
     }
 }
 
-
 .primary-nav {
     overflow: hidden;
     font-size: 2em;
@@ -157,14 +146,12 @@ label.primary-nav-toggle {
     transform-origin: 120%;
 
     a {
+        color: $blue;
         display: block;
         padding: 0.3em 0;
         &:active { background-color: $pink; color: #fff; }
     }
 }
-
-
-
 
 #primary-nav-toggle {
     display: none;
@@ -191,10 +178,6 @@ label.primary-nav-toggle {
         }
     }
 }
-
-
-
-
 
 @include respond(800px) {
 
