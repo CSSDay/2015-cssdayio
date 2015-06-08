@@ -6,7 +6,6 @@ $grid-gutter: 0.5 * $gutter;
 
     i.fa {
         color: $blue;
-        font-size: 1.5em;
     }
 
     .title {
@@ -56,13 +55,36 @@ $grid-gutter: 0.5 * $gutter;
         .col {
             border: none;
         }
+        .col + .col {
+            display: none;
+        }
         strong {
             color: $blue;
         }
     }
 
+    .row {
+        clear: both;
+    }
+
     .col + .col {
         text-align: center;
+    }
+
+    i.fa + span {
+        margin-left: 10px;
+    }
+
+    @include respond(700px) {
+        .row.header .col + .col {
+            display: table-cell;
+        }
+        i.fa {
+            font-size: 1.5em;
+        }
+        .col + .col span {
+            display: none;
+        }
     }
 
 }
