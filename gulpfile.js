@@ -34,19 +34,10 @@ gulp.task('server', function() {
  });
 
 /**
- * Move normalize and renmave so it can be a sass partial
- */
-gulp.task('normalize.css', function() {
-    return gulp.src(['vendor/normalize.css/normalize.css'])
-        .pipe(rename('_normalize.scss'))
-        .pipe(gulp.dest('./scss/base/'));
-});
-
-/**
  * Sass
  */
-gulp.task('sass', ['normalize.css'], function () {
-    return gulp.src('./scss/main.scss')
+gulp.task('sass', function () {
+    return gulp.src('./scss/*.scss')
         .pipe(sass({
             includePaths: ['scss'],
             errLogToConsole: true
@@ -54,7 +45,7 @@ gulp.task('sass', ['normalize.css'], function () {
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8']))
         .pipe(gulp.dest('./css'))
         .pipe(minifyCss({compatibility: 'ie8'}))
-        .pipe(rename('main.min.css'))
+        //.pipe(rename('main.min.css'))
         .pipe(gulp.dest('./css'));
 });
 

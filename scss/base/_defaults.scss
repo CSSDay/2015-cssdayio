@@ -55,19 +55,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 { font-size: 2em; }
-h2 { font-size: 1em; }
+h2 { font-size: 1.3em; }
 h3 { font-size: 1.5em; }
 
 em { font-style: italic; }
-strong { font-weight: 600; color: $pink; }
+strong { font-weight: 600; }
 
 p {
     line-height: 1.5em;
 
     &.em { font-size: 1.5em; }
     a { text-decoration: underline; }
+    strong { color: $pink; }
 }
 
+ul {
+    list-style: none;
+    padding: 0;
+    line-height: 170%;
+    li::before {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transform: translate(0, 0);
+        content: "\f138";
+        margin-right: 0.5 * $gutter;
+        color: $pink
+    }
+}
 
 
 

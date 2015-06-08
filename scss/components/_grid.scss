@@ -1,0 +1,68 @@
+$grid-line-color: #ddd;
+$grid-gutter: 0.5 * $gutter;
+
+.grid {
+    @include grid($grid-line-color, $grid-gutter, 700px);
+
+    i.fa {
+        color: $blue;
+        font-size: 1.5em;
+    }
+
+    .title {
+        font-weight: bold;
+        color: $pink;
+    }
+
+    .description {
+        display: block;
+        margin-top: $grid-gutter;
+    }
+
+    .terms {
+        display: block;
+        font: 0.6em Arial;
+        font-weight: bold;
+        margin-top: $grid-gutter;
+    }
+}
+
+.sponsor-types.grid {
+
+    .type {
+        font-weight: bold;
+        color: $pink;
+    }
+
+    .price {
+        float: right;
+        font-weight: bold;
+    }
+
+    .spots {
+        clear: both;
+        font-size: 0.6em;
+        display: block;
+        margin-top: 10px;
+    }
+
+}
+
+.sponsor-items.grid {
+    font-size: 0.8em;
+
+    .row.header {
+        background-color: #fafafa;
+        .col {
+            border: none;
+        }
+        strong {
+            color: $blue;
+        }
+    }
+
+    .col + .col {
+        text-align: center;
+    }
+
+}

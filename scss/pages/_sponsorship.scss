@@ -1,0 +1,30 @@
+header {
+    padding-top: 100px;
+    background: url('/images/flakes.png') repeat-x;
+
+    > div {
+        text-align: center;
+        color: #fff;
+
+        @include respond($desktop-breakpoint) {
+            width: $default-page-width;
+            margin: 0 auto;
+        }
+    }
+
+    h1 {
+        color: #fff;
+    }
+}
+
+
+
+main.panel {
+    text-align: left;
+
+    > div {
+        background-color: #fff;
+        border-radius: 5px;
+        padding: $gutter;
+    }
+}
