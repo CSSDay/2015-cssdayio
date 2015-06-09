@@ -106,12 +106,22 @@ a.button {
     border: 1px solid currentColor;
     border-radius: 3em;
     padding: 1em 4em;
+    position: relative;
 
     &:hover {
         background-color: $blue;
         color: #fff;
         border-color: $blue;
     }
+
+    .fa {
+        position: absolute;
+        left: 0.3em;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2em;
+    }
+
 }
 
 button {
