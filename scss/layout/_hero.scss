@@ -7,13 +7,13 @@
     > div {
         margin: 0 2em;
         position: relative;
-        height: 450px;
+        height: 500px;
         color: #fff;
 
         @include respond($desktop-breakpoint) {
             width: $default-page-width;
             margin: 0 auto;
-            min-height: 500px;
+            //min-height: 500px;
         }
         @include respond($desktop-breakpoint + 200px) {
             min-height: 650px;
@@ -30,8 +30,8 @@
         position: absolute;
         z-index: 2;
         right: 0;
-        top: 100px;
-        text-align: right;
+        top: 140px;
+        text-align: center;
 
         .title {
             color: #C1DEE5;
@@ -52,6 +52,10 @@
                 border-color: #fff;
                 color: $blue;
             }
+        }
+
+        @include respond(500px) {
+            text-align: right;
         }
 
     }
