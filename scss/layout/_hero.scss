@@ -1,6 +1,14 @@
 .hero {
-    position: relative;
+    //position: relative;
 
+    // Chrismas Presents  
+    background: url('/images/snow.png') no-repeat bottom left;
+    background-size: contain;
+
+    // @include respond($desktop-breakpoint) {
+    //     height: 400px;
+    // }
+    
     > div {
         margin: 0 2em;
         position: relative;
@@ -10,7 +18,17 @@
         @include respond($desktop-breakpoint) {
             width: $default-page-width;
             margin: 0 auto;
-            height: 500px;
+            min-height: 500px;
+            //height: 40vw;
+        }
+        @include respond($desktop-breakpoint + 200px) {
+            min-height: 650px;
+        }
+        @include respond($desktop-breakpoint + 500px) {
+            min-height: 700px;
+        }
+        @include respond($desktop-breakpoint + 900px) {
+            min-height: 900px;
         }
     }
 
@@ -56,24 +74,24 @@
         color: rgba(255, 255, 255, 0.6);
     }
 
-    // Chrismas Presents
-    &::after {
-        content: '';
-        display: block;
-        height: 310px;
-        position: absolute;
-        z-index: 1;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: url('/images/snow.png') no-repeat bottom left;
-        background-size: cover;
-        pointer-events: none; // Just in case the zindexing doesnt work
+    // // Chrismas Presents
+    // &::after {
+    //     content: '';
+    //     display: block;
+    //     height: 310px;
+    //     position: absolute;
+    //     z-index: 1;
+    //     bottom: 0;
+    //     left: 0;
+    //     right: 0;
+    //     background: url('/images/snow.png') no-repeat bottom left;
+    //     background-size: cover;
+    //     pointer-events: none; // Just in case the zindexing doesnt work
 
-        @include respond($desktop-breakpoint) {
-            height: 400px;
-        }
-    }
+    //     @include respond($desktop-breakpoint) {
+    //         height: 400px;
+    //     }
+    // }
 
     // Countdown
     .countdown {
