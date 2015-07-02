@@ -37,3 +37,24 @@ main.panel {
         padding-right: 0;
     }
 }
+
+.sponsor-types {
+
+    .col {
+        position: relative;
+    }
+    
+    .status {
+        font-size: 0.5em;
+        background-color: $pink;
+        color: #fff;
+        padding: 0.3em;
+        position: absolute;
+        top: 0px;
+        right: -4px;
+        border-radius: 2px;
+        transform: rotate(10deg);
+        z-index: 1000;
+    }
+
+}
