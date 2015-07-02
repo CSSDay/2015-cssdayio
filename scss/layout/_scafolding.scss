@@ -1,3 +1,7 @@
+main {
+    background: linear-gradient(#fff, $section-bg-color, #fff);
+}
+
 .panel {
     position: relative;
     text-align: center;
@@ -16,14 +20,3 @@
     }
 
 }
-
-// h1 {
-//     // margin: 0;
-//     //display: inline;
-//     font-weight: normal;
-//     background: linear-gradient(90deg, $blue, $pink);
-//       -webkit-background-clip: text;
-//       -moz-background-clip: text;
-//       -webkit-text-fill-color: transparent;
-//       -moz-text-fill-color: transparent;
-// }

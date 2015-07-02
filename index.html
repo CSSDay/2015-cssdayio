@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CSS Day</title>
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/vendor/normalize.css/normalize.css">
     <link rel="stylesheet" href="/css/main.css">
 </head>
@@ -29,7 +30,6 @@
                     <a href="#tickets">Tickets</a>
                     <a href="#sessions">Sessions</a>
                     <a href="#sponsorship">Sponsorship</a>
-                    <a href="#venue">Venue</a>
                 </nav>
 
             </header>
@@ -40,79 +40,78 @@
                 <a class="button" href="http://cssday.eventbrite.com">Tickets</a>
             </div>
 
-            <a class="twitter" href="https://twitter.com/cssdayio">cssdayio</a>
+            <a class="twitter" href="https://twitter.com/cssdayio"><i class="fa fa-twitter"></i> cssdayio</a>
 
         </div>
     </section>
 
-    <section class="panel event" id="event">
-        <div>
-            <h1>Event</h1>
-            <p class="em">
-                Already know CSS? Perfect, you're our target audience. Come level-up and
-                make sense of the parts you struggle with. We'll have intermediate to
-                advanced lectures all day!
-            </p>
-            <h3 class="date">Saturday, December 5th 2015.</h3>
-        </div>
-    </section>
+    <main>
 
-    <section class="panel tickets" id="tickets">
-        <div>
-            <h1>Tickets</h1>
-            <p class="em">Tickets will be available June 1st at 4:00 PM</p> 
-            <div style="width:100%; text-align:left;"><iframe  src="//eventbrite.com/tickets-external?eid=6612142095&ref=etckt" frameborder="0" height="350" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;" ><a class="powered-by-eb" style="color: #dddddd; text-decoration: none;" target="_blank" href="http://www.eventbrite.com/r/etckt">Powered by Eventbrite</a></div></div>
-        </div>
-    </section>
-
-    <section class="panel sessions" id="sessions">
-        <div>
-            <h1>Sessions</h1>
-            <p>
-                <a href="https://www.surveymonkey.com/r/cssdayio-2015">Vote</a>
-                on which sessions you want to hear. Interested in speaking? We've announced
-                our <a href="https://cssday.wufoo.com/forms/cssdayio-2015-call-for-speakers/">call-for-speakers</a>
-            </p>
-            <div class="session-list">
-                <div>Sass: Beyond Intermediate</div>
-                <div>PostCSS</div>
-                <div>Better Selector Strategy</div>
-                <div>CSS Tricks</div>
-                <div>CSS Methodologies</div>
-                <div>Layout Strategies</div>
-                <div>Twitter Bootstrap: Under the hood</div>
-                <div>CSS Organization</div>
-                <div>A dozen tricks with Pseudo elements</div>
-                <div>CSS Namespacing / Shadow DOM</div>
-                <div>CSS Workflows</div>
+        <section class="panel event" id="event">
+            <div>
+                <h1>Event</h1>
+                <p class="em">
+                    Already know CSS? Perfect, you're our target audience. Come level-up and
+                    make sense of the parts you struggle with. We'll have intermediate to
+                    advanced lectures all day!
+                </p>
+                <p class="date">Saturday, December 5th 2015 at Infusionsoft. <a href="/venue.html">See Venue Details</a></p>
+                
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="panel sponsorship" id="sponsorship">
-        <div>
-            <h1>Sponsorship</h1>
-            <p>
-                Interested in sponsoring? <a href="sponsorship.html">See our packages...</a>
-            </p>
-        </div>
-    </section>
+        <section class="panel tickets" id="tickets">
+            <div>
+                <h1>Tickets</h1>
+                <p class="em">Tickets will be available June 1st at 4:00 PM</p> 
+                <div style="width:100%; text-align:left;"><iframe  src="//eventbrite.com/tickets-external?eid=6612142095&ref=etckt" frameborder="0" height="350" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;" ><a class="powered-by-eb" style="color: #dddddd; text-decoration: none;" target="_blank" href="http://www.eventbrite.com/r/etckt">Powered by Eventbrite</a></div></div>
+            </div>
+        </section>
 
-    <section class="panel venue" id="venue">
-        <div>
-            <p class="em">
-                The venue is picked, we just need to iron out details before it's announced.
-                And by the way it's amazing!
-            </p>
-        </div>
-    </section>
+        <section class="panel sessions" id="sessions">
+            <div>
+                <h1>Sessions</h1>
+                <p>
+                    <a href="https://www.surveymonkey.com/r/cssdayio-2015">Vote</a>
+                    on which sessions you want to hear. Interested in speaking? We've announced
+                    our <a href="https://cssday.wufoo.com/forms/cssdayio-2015-call-for-speakers/">call-for-speakers</a>
+                </p>
+                <div class="session-list">
+                    <div>Sass: Beyond Intermediate</div>
+                    <div>PostCSS</div>
+                    <div>Better Selector Strategy</div>
+                    <div>CSS Tricks</div>
+                    <div>CSS Methodologies</div>
+                    <div>Layout Strategies</div>
+                    <div>Twitter Bootstrap: Under the hood</div>
+                    <div>CSS Organization</div>
+                    <div>A dozen tricks with Pseudo elements</div>
+                    <div>CSS Namespacing / Shadow DOM</div>
+                    <div>CSS Workflows</div>
+                </div>
+            </div>
+        </section>
 
-    <footer class="panel">
-        <div>
-            <span>&copy; CSS Day 2015 | <a href="mailto:event@cssday.io">Email us</a></span>
-            <a class="twitter" href="https://twitter.com/cssdayio">cssdayio</a>
-            </span>
-        </div>
+        <section class="panel sponsorship" id="sponsorship">
+            <div>
+                <h1>Sponsorship</h1>
+                <p>
+                    Interested in sponsoring? <a href="sponsorship.html">See our packages...</a>
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+
+        <section class="panel legal">
+            <div>
+                <span>&copy; CSSDay.io 2015 | <a href="mailto:event@cssday.io">Email us</a></span>
+                <a href="https://twitter.com/cssdayio"><i class="fa fa-twitter"></i> cssdayio</a>
+            </div>
+        </section>
+
     </footer>
 
 </div>

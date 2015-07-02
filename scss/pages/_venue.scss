@@ -1,22 +1,10 @@
+body {
+    background: $blue url("/images/venue.jpg") no-repeat center top;
+}
+
 .page {
     padding-top: 100px;
     background: url('/images/flakes.png') repeat-x;
-}
-
-header {
-    > div {
-        text-align: center;
-        color: #fff;
-
-        @include respond($desktop-breakpoint) {
-            width: $default-page-width;
-            margin: 0 auto;
-        }
-    }
-
-    h1 {
-        color: #fff;
-    }
 }
 
 main.panel {
@@ -25,6 +13,7 @@ main.panel {
     padding-bottom: 0.5em;
 
     > div {
+        overflow: hidden;
         background-color: #fff;
         border-radius: 20px;
         padding: $gutter;
@@ -35,5 +24,17 @@ main.panel {
         margin: 0 auto;
         padding-left: 0;
         padding-right: 0;
+    }
+}
+
+.map {
+    float: left;
+    display: block;
+}
+
+footer {
+    text-align: center;
+    .button {
+        color: #fff;
     }
 }

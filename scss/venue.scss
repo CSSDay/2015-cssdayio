@@ -7,7 +7,6 @@
 @import "vars";
 @import "utils/mixins/layout";
 @import "utils/mixins/buttons";
-@import "utils/mixins/grid";
 
 /**
  * Base
@@ -17,14 +16,7 @@
 
 
 /**
- * Components
- */
-
-@import "components/grid";
-
-
-/**
  * Pages
  */
 
-@import "pages/sponsorship";
+@import "pages/venue";
