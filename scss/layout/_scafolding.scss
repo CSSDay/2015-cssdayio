@@ -8,8 +8,8 @@ main {
     padding: 2em 1em;
 
     > div {
-        position: relative;
         @include vertical-gutters($gutter);
+        position: relative;
 
         @include respond($desktop-breakpoint) {
             width: $default-page-width;

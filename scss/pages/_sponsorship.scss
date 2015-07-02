@@ -25,6 +25,7 @@ main.panel {
     padding-bottom: 0.5em;
 
     > div {
+        @include vertical-gutters($gutter);
         background-color: #fff;
         border-radius: 20px;
         padding: $gutter;
