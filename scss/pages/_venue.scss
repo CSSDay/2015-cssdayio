@@ -30,6 +30,8 @@ main.panel {
 .map {
     float: left;
     display: block;
+    width: 100%;
+    max-width: 300px;
 }
 
 footer {
