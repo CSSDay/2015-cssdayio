@@ -1,0 +1,78 @@
+.speakers {    
+    background: url('/images/flakes.png') repeat-x;
+
+    > div {
+        min-height: 450px;
+        text-align: center;
+    }
+
+}
+
+
+.speaker {
+    display: inline-block;
+    margin: 1em;
+    color: #fff;
+    font-size: 0.7em;
+}
+
+
+.speaker .name {
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+.speaker .work {
+    margin-top: 0.5em;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.7em;
+    a {
+        color: inherit;
+        margin-left: 1em;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.speaker .graphic {
+    
+    // Layout
+    width: 180px;
+    height: 180px;
+
+
+    // Circle
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: 0 0 0 7px rgba(255,255,255, 0.1);
+    overflow: hidden;
+
+    // Hack to get hover effect working correctly
+    opacity: 0.99;
+    transition: opacity 0.3s;
+
+    .contact {
+        background-color: rgba(255,255,255,0.9);
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: all 0.3s;
+
+        padding-top: 40px;
+
+    }
+
+    &:hover {
+        opacity: 1;
+
+        .contact {
+            transform: translateY(0%);
+            opacity: 1;
+        }
+    }
+    
+}
+
+

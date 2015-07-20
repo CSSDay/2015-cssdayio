@@ -56,7 +56,7 @@
 // ***********************************
 
 // Responsive
-@mixin respond($min-width, $max-width:0) {
+@mixin respond($min-width) {
 	@media screen and (min-width: $min-width) {
 		@content;
 	}
