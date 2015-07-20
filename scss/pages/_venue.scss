@@ -1,5 +1,6 @@
 body {
     background: $blue url("/images/venue.jpg") no-repeat center top;
+    background-size: cover;
 }
 
 .page {
@@ -12,6 +13,13 @@ main.panel {
     padding-right: 0.5em;
     padding-bottom: 0.5em;
 
+    @include respond($desktop-breakpoint) {
+        width: $default-page-width;
+        margin: 0 auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     > div {
         overflow: hidden;
         background-color: #fff;
@@ -19,22 +27,27 @@ main.panel {
         padding: $gutter;
     }
 
-    @include respond($desktop-breakpoint) {
-        width: $default-page-width;
-        margin: 0 auto;
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
 
-.map {
-    float: left;
-    display: block;
-    width: 100%;
-    max-width: 300px;
+    .map {
+        display: block;
+        width: 100%;
+        @include respond($desktop-breakpoint) {
+            width: 300px;
+            float: left;
+        }
+    }
+
+    .content {
+        @include respond($desktop-breakpoint) {
+            margin-left: 300px;
+        }
+    }
+
+
 }
 
 footer {
+    margin-bottom: 2em;
     text-align: center;
     .button {
         color: #fff;
