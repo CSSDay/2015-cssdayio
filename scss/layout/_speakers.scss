@@ -50,7 +50,7 @@
 
     // Hack to get hover effect working correctly
     opacity: 0.99;
-    transition: opacity 0.3s;
+    transition: opacity 0.5s;
 
     .contact {
         background-color: rgba(255,255,255,0.9);
@@ -58,7 +58,7 @@
         width: 100%;
         opacity: 0;
         transform: translateY(100%);
-        transition: all 0.3s;
+        transition: all 0.5s;
 
         padding-top: 40px;
 
