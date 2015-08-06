@@ -1,0 +1,24 @@
+ul.list {
+    list-style: none;
+    padding: 0;
+    line-height: 170%;
+    li {
+        padding-left: 1.3em;
+        position: relative;
+    }
+    li::before {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transform: translate(0, 0);
+        content: "\f138";
+        margin-right: 0.5 * $gutter;
+        color: $pink;
+        position: absolute;
+        left: 0;
+        top: 0.4em;
+    }
+}

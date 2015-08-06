@@ -1,6 +1,58 @@
-main {
-    background: linear-gradient(#fff, $section-bg-color, #fff);
+/****************************************
+  General Scafolding and Slide Effect
+*****************************************/
+
+/**
+ * Speakers Talks Container
+ */
+.speaker-talks {
+    position: fixed;
+    opacity: 0;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    @include respond($slide-right-width) {
+        width: $slide-right-width;
+    }
 }
+
+/**
+ * Page
+ */
+.page {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    transform: translateY(-1px);
+    transition: transform 0.2s;
+
+    background-image: url("/images/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: 0 0 50px -5px #000;
+}
+
+/**
+ * Slide Right
+ */
+body.slide-right {
+    overflow: hidden;
+    .speaker-talks {
+        opacity: 1;
+    }
+    .page {
+        transform: translateX($slide-right-width);
+        display: block;
+        cursor: pointer;
+    }
+}
+
+
+/****************************************
+  Panels
+*****************************************/
 
 .panel {
     position: relative;

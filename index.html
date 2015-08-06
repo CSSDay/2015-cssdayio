@@ -8,10 +8,113 @@
     <title>CSS Day</title>
     <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/vendor/normalize.css/normalize.css">
+    <link rel="stylesheet" href="/vendor/slick-carousel/slick/slick.css">
     <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
+
+<div class="speaker-talks">
+    <div class="slider">
+        <div class="speaker snook">
+            
+            <header>
+                <div class="speaker-photo">
+                    <img src="/images/speakers/snook.jpg" alt="Jonathan Snook">
+                </div>
+                <h1>The Future is in pieces</h1>
+                <h2>by Jonathan Snook</h2>
+            </header>
+
+            <p>
+                In the last few years, we've seen an emergence of a modular way of thinking about code and design.
+                We've seen the rise of SMACSS, BEM, and Atomic Design. This talk will look at those modular
+                concepts and how they can streamline development for large and long-running projects. We'll also
+                look at how these approaches can ease responsive design and development. Lastly, we will look at
+                where the modular approach is going in the future as Web Components slowly make their way into
+                browsers and application frameworks.
+            </p>
+
+        </div>
+        <div class="speaker fisher">
+            
+            <header>
+                <div class="speaker-photo">
+                    <img src="/images/speakers/fisher.jpg" alt="Lynn Fisher">
+                </div>
+                <h1>Illustration with CSS</h1>
+                <h2>by Lynn Fisher</h2>
+            </header>
+
+            <p>
+                Description: You can use the CSS you already know to create beautiful illustrations in your browser.
+                Better yet, you can achieve surprising results while still maintaining clean, semantic markup. We'll
+                take a look at techniques for drawing with CSS, practical applications, and pushing the limits of
+                what CSS can do.
+            </p>
+
+        </div>
+        <div class="speaker hernandez">
+            
+            <header>
+                <div class="speaker-photo">
+                    <img src="/images/speakers/hernandez.jpg" alt="Guil Hernandez">
+                </div>
+                <h1>Sass: An Advanced Look</h1>
+                <h2>by Guil Hernandez</h2>
+            </header>
+
+            <p>There's more to CSS preprocessors than variables, mixins, partials, and color functions. Now that you've mastered the basics of Sass, it's time to dive into more powerful features that can do more than you've ever imagined! </p>
+            <p>In this session, Guil will cover cutting edge Sass features that will boost your Sass skills and front-end workflow, including:</p>
+
+            <ul class="list">
+                <li>Functions and directives</li>
+                <li>Selectors</li>
+                <li>Sass maps</li>
+                <li>Debugging</li>
+                <li>Workflow tips</li>
+            </ul>
+
+        </div>
+        <div class="speaker sauve">
+            
+            <header>
+                <div class="speaker-photo">
+                    <img src="/images/speakers/sauve.jpg" alt="Chris Sauvé">
+                </div>
+                <h1>Content-driven Layouts with Flexbox</h1>
+                <h2>by Chris Sauvé</h2>
+            </header>
+
+            <p>Handling variable or unknown content in a layout can be tricky. Our current responsive layout techniques generally have unspoken assumptions that can easily be broken by changes in content, internationalization, and a collection of other unexpected adjustments to what needs to be laid out.</p>
+            <p>This talk will discuss how we can use Flexbox-driven layouts to overcome these challenges - how we can learn to stop worrying about our traditional, top-down layout techniques and love the content-driven layouts that Flexbox affords. We'll go over the key parts of the Flexbox spec that let the container respond to the content, instead of the other way around, and how we can build amazingly responsive layouts without a single media query or fixed width.</p>
+            
+
+        </div>
+        <!--<div class="speaker newton">
+            
+
+
+        </div> -->
+        <div class="speaker clark">
+
+            <header>
+                <div class="speaker-photo">
+                    <img src="/images/speakers/clark.jpg" alt="David Clark">
+                </div>
+                <h1>Exploring New Possibilities with PostCSS</h1>
+                <h2>by David Clark</h2>
+            </header>
+                
+            <p>PostCSS is a parser and stringifier that makes it easy to create new CSS tools with JavaScript. It can power alternatives to Sass and Less - language extensions - but it can also power an unlimited variety of other tools, doing other things. With its simple API, sourcemap support, and modular ecosystem, PostCSS brings important new powers and possibilities to frontend developers.</p>
+            <p>In the CSS world, we're not accustomed to wielding such power - but there's no need to be afraid. After clarifying what PostCSS is (and what it's not), dispelling some misleading rumors, and re-framing the conversation, David will expose you to different types of tools that have been built with PostCSS, and show how you could start building your own.</p>
+
+        </div>
+    </div>
+
+    <button class="close"><i class="fa fa-arrow-right"></i></button>
+
+</div>
 
 <div class="page">
     
@@ -28,7 +131,7 @@
                 <nav class="primary-nav">
                     <a href="#event">Event and Venue</a>
                     <a href="#tickets">Tickets</a>
-                    <a href="#sessions">Sessions</a>
+                    <a href="#speakers">Speakers</a>
                     <a href="#sponsorship">Sponsorship</a>
                 </nav>
 
@@ -71,25 +174,87 @@
             </div>
         </section>
 
-        <section class="panel sessions" id="sessions">
+        <section class="panel speakers" id="speakers">
             <div>
-                <h1>Sessions</h1>
-                <p>
-                    CSSDay would like to thank everyone who submitted call-for-speakers. We've received enough
-                    feedback to make our decisions. The event will have some great out-of-town guest speakers
-                    coming our way! The speakers will be posted soon. The topics will reflect the list below:
-                </p>
-                <div class="session-list">
-                    <div>CSS Structure / Layout</div>
-                    <div>CSS Modularization</div>
-                    <div>Flexbox</div>
-                    <div>Advanced Sass</div>
-                    <div>CSS Tricks</div>
-                    <div>Tricks with Pseudo elements</div>
-                    <div>&lt;picture&gt; Element</div>
-                    <div>PostCSS</div>
-                    <div>CSS Animations</div>
+
+  
+                <div class="speaker">
+                    <div class="speaker-photo">
+                        <img src="/images/speakers/snook.jpg" alt="Jonathan Snook">
+                        <div class="ribbon">
+                            <div>Jonathan Snook</div>
+                        </div>
+                    </div>
+                    <div class="name">The Future is in pieces</div>                    
+                    <div class="work">Creator of SMACSS <a href="http://twitter.com/snookca"><i class="fa fa-twitter"></i> snookca</a></div>
                 </div>
+
+                <div class="speaker">
+                    <div class="speaker-photo">
+                        <img src="/images/speakers/fisher.jpg" alt="Lynn Fisher">
+                        <div class="ribbon">
+                            <div>Lynn Fisher</div>
+                        </div>
+                    </div>
+                    <div class="name">Illustration with CSS</div>                    
+                    <div class="work">&amp;yet <a href="http://twitter.com/lynnandtonic"><i class="fa fa-twitter"></i> lynnandtonic</a></div>                    
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-photo">
+                        <img src="/images/speakers/hernandez.jpg" alt="Guil Hernandez">
+                        <div class="ribbon">
+                            <div>Guil Hernandez</div>
+                        </div>
+                    </div>
+                    <div class="name">Sass: An Advanced Look</div>                    
+                    <div class="work">Treehouse <a href="http://twitter.com/guilh"><i class="fa fa-twitter"></i> guilh</a></div>                    
+                </div>
+
+                <div class="speaker">
+                    <div class="speaker-photo">
+                        <img src="/images/speakers/sauve.jpg" alt="Chris Sauvé">
+                        <div class="ribbon">
+                            <div>Chris Sauvé</div>
+                        </div>
+                    </div>
+                    <div class="name">Content-driven Layouts with Flexbox</div>                    
+                    <div class="work">Shopify <a href="http://twitter.com/_lemonmade"><i class="fa fa-twitter"></i> _lemonmade</a></div>                    
+                </div>
+
+                <!-- <div class="speaker">
+                    <div class="speaker-photo">
+                        <img src="/images/speakers/newton.jpg" alt="Dave Newton">
+                        <div class="ribbon">
+                            <div>Dave Newton</div>
+                        </div>
+                    </div>
+                    <div class="name"><em>Announcing Soon</em></div>                    
+                    <div class="work">Shopify <a href="http://twitter.com/newtron"><i class="fa fa-twitter"></i> newtron</a></div>                    
+                </div> -->
+
+                <div class="speaker">
+                    <div class="speaker-photo">
+                        <img src="/images/speakers/clark.jpg" alt="David Clark">
+                        <div class="ribbon">
+                            <div>David Clark</div>
+                        </div>
+                    </div>
+                    <div class="name">Exploring New Possibilities with PostCSS</div>                  
+                    <div class="work"><a href="http://twitter.com/davidtheclark"><i class="fa fa-twitter"></i> davidtheclark</a></div>                    
+                </div>
+      
+                <!-- <div class="speaker">
+                    <div class="speaker-photo">
+                        <img src="/images/speakers/westfall.jpg" alt="Brad Westfall">
+                        <div class="ribbon">
+                            <div>Brad Westfall</div>
+                        </div>
+                    </div>
+                    <div class="name">Structure and Layout Strategies</div>                    
+                    <div class="work">AZPixels <a href="http://twitter.com/bradwestfall"><i class="fa fa-twitter"></i> bradwestfall</a></div>                    
+                </div> -->
+
             </div>
         </section>
 
@@ -118,7 +283,7 @@
 </div>
 
 <link href='http://fonts.googleapis.com/css?family=Lato:400,300|Changa+One' rel='stylesheet' type='text/css'>
-<script src="/scripts/build.min.js"></script>
+<script src="/build/build.js"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -128,7 +293,6 @@
 
   ga('create', 'UA-46741609-4', 'auto');
   ga('send', 'pageview');
-
 </script>
 
 </body>

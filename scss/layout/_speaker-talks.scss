@@ -1,0 +1,95 @@
+.speaker-talks {
+
+    .slider {
+        height: 90vh;
+    }
+
+    .speaker {
+        height: 90vh;
+        outline: none;
+        padding: 1em 2em 2em 2em;
+        color: #fff;
+
+        header {
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            position: relative;
+            margin-left: 5em;
+            text-align: right;
+
+            @include respond($slide-right-width) {
+                margin-bottom: 1em;
+            }
+
+            .speaker-photo {
+                position: absolute;
+                left: -6em;
+                top: -2em;
+                width: 120px;
+                height: 120px;
+            }
+
+            h1 {
+                margin: 0;
+                color: rgba(255,255,255,0.8);
+                font-size: 1em;
+            }
+
+            h2 {
+                color: #fff;
+                font-size: 0.8em;
+                margin-top: 0.1em;
+                font-family: $default-font-family;
+            }
+        }
+
+        p, ul.list {
+            font-size: 0.65em;
+            line-height: 180%;
+            text-align: justify;
+            @include respond($slide-right-width) {
+                font-size: 0.9em;
+            }
+        }
+        
+        // Individual Adjustments
+        @include respond($slide-right-width) {
+            &.sauve p { font-size: 0.7em; }
+            &.hernandez p, &.hernandez ul.list { font-size: 0.7em; }
+            &.clark p { font-size: 0.7em; }
+        }
+
+        ul.list li::before {
+            color: $blue;
+        }
+
+    }
+
+    .slick-dots {
+        margin: 0;
+        transform: translateX(-50px);
+        @include respond($slide-right-width + 100px) {
+            transform: translateX(0); // negate
+        }
+    }
+
+    button.close {
+        position: absolute;
+        outline: none;
+        right: 1rem;
+        bottom: 0.5rem;
+        font-size: 2em;
+        color: #fff;
+        background: none;
+        border: none;
+        transition: transform 0.2s;
+
+        &:hover, &:active {
+            transform: translateX(0.1em);
+        }
+
+        @include respond($slide-right-width + 100px) {
+            display: none;
+        }
+    }
+
+}

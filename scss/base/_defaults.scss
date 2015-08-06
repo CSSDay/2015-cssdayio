@@ -25,9 +25,7 @@ html {
 
 body {
     margin: 0;
-    background: $blue url("/images/hero.jpg") no-repeat center top;
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: $pink;
 }
 
 
@@ -66,38 +64,12 @@ p {
     strong { color: $pink; }
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    line-height: 170%;
-    li {
-        padding-left: 1.3em;
-        position: relative;
-    }
-    li::before {
-        display: inline-block;
-        font: normal normal normal 14px/1 FontAwesome;
-        font-size: inherit;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        transform: translate(0, 0);
-        content: "\f138";
-        margin-right: 0.5 * $gutter;
-        color: $pink;
-        position: absolute;
-        left: 0;
-        top: 0.4em;
-    }
-}
-
-
 
 /****************************************
   Buttons
 *****************************************/
 
-a.button {
+.page a.button {
     @include button;
     color: $blue;
     border: 1px solid currentColor;
@@ -121,7 +93,7 @@ a.button {
 
 }
 
-button {
+.page button {
     @extend a.button;
 }
 
@@ -131,6 +103,6 @@ button {
 *****************************************/
 
 ::selection {
-    background: $blue;
+    background: rgba(0,0,0,0.4);
     color: #fff;
 }
