@@ -1,11 +1,11 @@
 .hero {
 
-    background-image: url('/images/snow.png'), url("/images/hero-small.jpg");
+    background-image: url('/images/snow.png'), linear-gradient(60deg, $blue, $pink);
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: contain, cover;
 
-    @include respond(600px) {
+    @include respond($desktop-breakpoint) {
         background-image: url('/images/snow.png'), url("/images/hero.jpg");
     }
 
@@ -19,7 +19,6 @@
         @include respond($desktop-breakpoint) {
             width: $default-page-width;
             margin: 0 auto;
-            //min-height: 500px;
         }
         @include respond($desktop-breakpoint + 200px) {
             min-height: 650px;
