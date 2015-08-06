@@ -1,9 +1,14 @@
 .hero {
 
-    background-image: url('/images/snow.png'), url("/images/hero.jpg");
+    background-image: url('/images/snow.png'), url("/images/hero-small.jpg");
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: contain, cover;
+
+    @include respond(600px) {
+        background-image: url('/images/snow.png'), url("/images/hero.jpg");
+    }
+
 
     > div {
         margin: 0 2em;
