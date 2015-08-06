@@ -5,6 +5,10 @@
     background-position: bottom center;
     background-size: contain, cover;
 
+    @include respond(600px) {
+        background-image: url('/images/snow.png'), linear-gradient(60deg, $blue, $pink);
+    }    
+
     @include respond($desktop-breakpoint) {
         background-image: url('/images/snow.png'), url("/images/hero.jpg");
     }
