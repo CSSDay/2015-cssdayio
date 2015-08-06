@@ -1,0 +1,55 @@
+.ribbon {
+    font-size: 0.7em;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    z-index: 100;
+}
+
+.ribbon:before, .ribbon:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -1em;
+    border: 1.5em solid #903D68;
+    z-index: -1;
+}
+
+.ribbon:before {
+    left: -1.8em;
+    border-right-width: 1.5em;
+    border-left-color: transparent;
+}
+.ribbon:after {
+    right: -1.8em;
+    border-left-width: 1.5em;
+    border-right-color: transparent;
+}
+
+.ribbon div {
+    background-color: $pink;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 1.4em;
+    padding: 0.4em;
+}
+
+.ribbon div:before, .ribbon div:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #5F2A45 transparent transparent transparent;
+    font-size: 0.8em;
+    bottom: -0.9em;
+}
+.ribbon div:before {
+    left: 0;
+    border-width: 1em 0 0 1em;
+}
+.ribbon div:after {
+    right: 0;
+    border-width: 1em 1em 0 0;
+}

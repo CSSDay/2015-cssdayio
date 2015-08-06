@@ -7,30 +7,30 @@ var minifyCss   = require('gulp-minify-css');
 var rename      = require('gulp-rename');
 var concat      = require('gulp-concat');
 var uglify      = require('gulp-uglify');
-var connect     = require('connect');
-var serveStatic = require('serve-static');
+var serve       = require('gulp-serve');
 
 /**
  * Server
  */
-gulp.task('server', function() {
-    connect().use(serveStatic(__dirname)).listen(8080);
-    console.log('Connect on localhost:8080');
-});
+gulp.task('server', serve({
+  root: ['.'],
+  port: 8080
+}));
 
 /**
  * JS
  */
  gulp.task('js', function() {
    return gulp.src([
-         //'./vendor/jquery/dist/jquery.js',
-         './scripts/src/**/*.js'
+         './vendor/jquery/dist/jquery.js',
+         './vendor/slick-carousel/slick/slick.js',
+         './src/**/*.js'
        ])
      .pipe(concat('build.js'))
-     .pipe(gulp.dest('./scripts'))
-     .pipe(uglify())
-     .pipe(rename('build.min.js'))
-     .pipe(gulp.dest('./scripts'))
+     .pipe(gulp.dest('./build'))
+     // .pipe(uglify())
+     // .pipe(rename('build.min.js'))
+     // .pipe(gulp.dest('./scripts'))
  });
 
 /**
@@ -50,7 +50,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(['./vendor/*', './scripts/src/**/*.js'], ['js']);
+    gulp.watch(['./vendor/*', './src/**/*.js'], ['js']);
     gulp.watch(['./scss/**/*.scss', './vendor/normalize.css/normalize.css'], ['sass']);
 });
 
