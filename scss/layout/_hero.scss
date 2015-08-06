@@ -1,8 +1,10 @@
 .hero {
 
-    // Chrismas Presents  
-    background: url('/images/snow.png') no-repeat bottom left;
-    background-size: contain;
+    background-image: url('/images/snow.png'), url("/images/hero.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain, cover;
+    box-shadow: 0 0 50px -5px #000;
 
     > div {
         margin: 0 2em;
