@@ -35,21 +35,3 @@
 @import "components/ribbon";
 @import "components/slick";
 @import "components/bullet-list";
-
-
-
-body {
-    background-color: $pink;
-    //background: $blue url("/images/bg.jpg") no-repeat left bottom;
-    // background-size: 600px;
-    // background-attachment: fixed;
-}
-
-.page {
-    //background-color: $blue;
-    background-image: url("/images/hero.jpg");
-    background-repeat: no-repeat;
-    //background-position: center bottom;
-    background-size: contain;
-    box-shadow: 0 0 50px -5px #000;
-}
