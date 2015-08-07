@@ -43,12 +43,17 @@
             font-size: 0.5em;
             line-height: 180%;
             text-align: justify;
+
             @include respond($slide-right-width) {
                 font-size: 0.8em;
             }
         }
+
+        // Individual Adjustments for Mobile
+        &.snook p { font-size: 0.7em; }
+        &.fisher p { font-size: 0.7em; }
         
-        // Individual Adjustments
+        // Individual Adjustments for Desktop
         @include respond($slide-right-width) {
             &.snook p { font-size: 1em; }
             &.fisher p { font-size: 1em; }
