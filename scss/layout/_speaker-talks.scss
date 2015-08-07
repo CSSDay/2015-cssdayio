@@ -15,10 +15,7 @@
             position: relative;
             margin-left: 5em;
             text-align: right;
-
-            @include respond($slide-right-width) {
-                margin-bottom: 1em;
-            }
+            margin-bottom: 1em;
 
             .speaker-photo {
                 position: absolute;
@@ -43,19 +40,18 @@
         }
 
         p, ul.list {
-            font-size: 0.6em;
+            font-size: 0.5em;
             line-height: 180%;
             text-align: justify;
             @include respond($slide-right-width) {
-                font-size: 0.9em;
+                font-size: 0.8em;
             }
         }
         
         // Individual Adjustments
         @include respond($slide-right-width) {
-            &.sauve p { font-size: 0.7em; }
-            &.hernandez p, &.hernandez ul.list { font-size: 0.7em; }
-            &.clark p { font-size: 0.7em; }
+            &.snook p { font-size: 1em; }
+            &.fisher p { font-size: 1em; }
         }
 
         ul.list li::before {
