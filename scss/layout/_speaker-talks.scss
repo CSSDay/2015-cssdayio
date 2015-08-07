@@ -50,8 +50,8 @@
         }
 
         // Individual Adjustments for Mobile
-        &.snook p { font-size: 0.7em; }
-        &.fisher p { font-size: 0.7em; }
+        &.snook p { font-size: 0.65em; }
+        &.fisher p { font-size: 0.65em; }
         
         // Individual Adjustments for Desktop
         @include respond($slide-right-width) {
