@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+$dot-size: 16px;
+
 .slick-dots {
     list-style: none;
     display: block;
@@ -10,6 +12,9 @@
         position: relative;
         display: inline-block;
         margin: 0 8px;
+        width: $dot-size;
+        height: $dot-size;
+
         button {
             border: 0;
             background: transparent;
@@ -19,18 +24,21 @@
             font-size: 0px;
             color: transparent;
             cursor: pointer;
+            width: $dot-size;
+            height: $dot-size;
+            
             &:hover, &:focus {
                 outline: none;
                 transform: scale(1.1);
             }
             &:before {
+                content: '';
                 position: absolute;
                 top: 0;
                 left: 0;
-                content: '';
                 border-radius: 50%;
-                width: 16px;
-                height: 16px;
+                width: $dot-size;
+                height: $dot-size;
                 line-height: 20px;
                 text-align: center;
                 border: 2px solid $blue;
