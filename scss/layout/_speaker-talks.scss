@@ -1,14 +1,11 @@
 .speaker-talks {
-    max-width: $slide-right-width !important;
 
     .slider {
         height: 90vh;
-        max-width: $slide-right-width !important;
     }
 
     .speaker {
         height: 90vh;
-        max-width: $slide-right-width !important;
         outline: none;
         padding: 1em 2em 2em 2em;
         color: #fff;
@@ -77,12 +74,10 @@
     }
 
     button.close {
-        position: absolute;
         outline: none;
-        //left: calc(100vw - 60px);
-        right: 1em;
-        bottom: 0.5rem;
-        font-size: 2em;
+        float: right;
+        margin-right: 1em;
+        font-size: 1.5em;
         color: #fff;
         background: none;
         border: none;

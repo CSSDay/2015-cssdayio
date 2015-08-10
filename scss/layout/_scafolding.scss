@@ -12,7 +12,8 @@
     left: 0;
     top: 0;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
+    max-width: $slide-right-width;
     @include respond($slide-right-width) {
         width: $slide-right-width;
     }
