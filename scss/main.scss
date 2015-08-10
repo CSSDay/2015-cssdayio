@@ -16,6 +16,15 @@
 @import "base/defaults";
 
 /**
+ * Components
+ */
+
+@import "components/ribbon";
+@import "components/slick";
+@import "components/bullet-list";
+@import "components/speaker-photo";
+
+/**
  * Layout
  */
 
@@ -27,11 +36,3 @@
 @import "layout/speakers";
 @import "layout/sponsorship";
 @import "layout/footer";
-
-/**
- * Components
- */
-
-@import "components/ribbon";
-@import "components/slick";
-@import "components/bullet-list";
