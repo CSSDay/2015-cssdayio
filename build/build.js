@@ -11856,7 +11856,7 @@ $(function() {
 
     // Selector Cache
     $slider = $('.speaker-talks .slider');
-    $speaker = $('.speaker');
+    $speaker = $('.speaker').not('.stub');
 
     /**
      * Slick
@@ -11878,11 +11878,12 @@ $(function() {
      */
     $('.speaker-photo').each(function() {
         $img = $(this).find('img');
+        if (!$img.length) return;
         $(this).css({
             'background-image': 'url("' + $img.attr('src') + '")'
         });
         $img.remove();
-    })
+    });
 
     /**
      * Speaker Talks
