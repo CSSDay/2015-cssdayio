@@ -41,7 +41,7 @@
 
     // Only needed when the background-image is displayed
     @include respond($desktop-breakpoint) {
-        text-shadow: 0 0 10px rgba(0,0,0, 0.5);
+        text-shadow: 3px 3px 3px rgba(0,0,0, 0.2);
     }
 
     .speaker-photo {
