@@ -27,10 +27,6 @@ $dot-size: 16px;
             width: $dot-size;
             height: $dot-size;
 
-            &:hover, &:focus {
-                outline: none;
-                transform: scale(1.1);
-            }
             &:before {
                 content: '';
                 position: absolute;
@@ -41,14 +37,22 @@ $dot-size: 16px;
                 height: $dot-size;
                 line-height: 20px;
                 text-align: center;
-                border: 2px solid $blue;
+                border: 2px solid rgba(255,255,255,0.7);
                 opacity: 1;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
             }
+
+            &:hover::before, &:focus::before {
+                transform: scale(1.1);
+                border-color: #fff;
+            }
         }
+
+        // Active
         &.slick-active button:before {
-            background-color: $blue;
+            border-color: #fff;
+            background-color: #fff;
         }
     }
 }
