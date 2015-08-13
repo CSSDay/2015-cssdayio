@@ -19,11 +19,6 @@ gulp.task('clean-css', function (cb) {
     cb();
 });
 
-gulp.task('clean-sass-vendors', function (cb) {
-    del('./scss/vendors/*');
-    cb();
-});
-
 gulp.task('server', serve({
     root: ['.'],
     port: 8080
@@ -42,16 +37,7 @@ gulp.task('js', ['clean-js'], function() {
     .pipe(gulp.dest('./build'))
 });
 
-gulp.task('sass-convert-partials', ['clean-sass-vendors'], function() {
-    gulp.src('vendor/normalize.css/normalize.css')
-        .pipe(rename('_normalize.scss'))
-        .pipe(gulp.dest('./scss/vendors/'));
-    gulp.src('vendor/slick-carousel/slick/slick.css')
-        .pipe(rename('_slick.scss'))
-        .pipe(gulp.dest('./scss/vendors/'));
-});
-
-gulp.task('sass', ['clean-css', 'sass-convert-partials'], function () {
+gulp.task('sass', ['clean-css'], function () {
     return gulp.src('./scss/*.scss')
         .pipe(sass({
             includePaths: ['scss'],
