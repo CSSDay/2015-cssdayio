@@ -1,3 +1,32 @@
-.panel.sponsorship {
+.panel.sponsors {
     background-color: #fff;
+
+    .brands {
+
+        img {
+            vertical-align: middle;
+            max-height: 100px;
+            max-width: 200px;
+            margin: 1em 2em;
+        }
+
+        .next {
+            display: inline-block;
+            vertical-align: middle;
+            width: 250px;
+            background-color: #eee;
+            font-size: 0.8em;
+            padding: 1em;
+            border-radius: 1em;
+            strong {
+                color: $pink;
+            }
+            > * {
+                display: block;
+            }
+        }
+
+    }
+
 }
+

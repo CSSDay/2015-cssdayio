@@ -10,12 +10,14 @@ html {
     color: $default-text-color;
     font: $default-font-size $default-font-family;
     font-weight: $default-font-weight;
+    letter-spacing: 0.05em;
 }
 
 *, *::before, *::after {
     box-sizing: inherit;
     color: inherit;
     font: inherit;
+    letter-spacing: inherit;
 }
 
 
@@ -60,6 +62,8 @@ p {
     line-height: 1.5em;
 
     &.em { font-size: 1.5em; }
+    &.footnote { font-size: 0.7em; }
+
     a { text-decoration: underline; }
     strong { color: $pink; }
 }
@@ -103,6 +107,6 @@ p {
 *****************************************/
 
 ::selection {
-    background: rgba(0,0,0,0.4);
-    color: #fff;
+    background: $pink;
+    color: white;
 }
