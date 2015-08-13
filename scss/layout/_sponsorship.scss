@@ -26,7 +26,14 @@
             }
         }
 
+        &:hover .next {
+            animation-name: shakeit;
+            animation-duration: 0.8s;
+            transform-origin: 50% 50%;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
     }
 
 }
-

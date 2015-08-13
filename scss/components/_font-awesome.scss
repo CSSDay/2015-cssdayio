@@ -1,0 +1,11 @@
+@import "../vendor/font-awesome/scss/variables";
+@import "../vendor/font-awesome/scss/mixins";
+$fa-font-path: "/vendor/font-awesome/fonts";
+@import "../vendor/font-awesome/scss/path";
+@import "../vendor/font-awesome/scss/core";
+
+.fa-twitter:before { content: $fa-var-twitter; }
+.fa-heart:before { content: $fa-var-heart; }
+.fa-arrow-right:before { content: $fa-var-arrow-right; }
+.fa-arrow-circle-left:before { content: $fa-var-arrow-circle-left; }
+.fa-check:before { content: $fa-var-check; }

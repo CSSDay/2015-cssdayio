@@ -1,6 +1,12 @@
 @charset "utf-8";
 
 /**
+ * Vendors
+ */
+
+@import "vendors/normalize";
+
+/**
  * Utils
  */
 
@@ -15,11 +21,11 @@
 
 @import "base/defaults";
 
-
 /**
  * Components
  */
 
+@import "components/font-awesome";
 @import "components/grid";
 @import "components/bullet-list";
 

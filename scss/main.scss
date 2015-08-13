@@ -1,6 +1,13 @@
 @charset "utf-8";
 
 /**
+ * Vendors
+ */
+
+@import "vendors/normalize";
+@import "vendors/slick";
+
+/**
  * Utils
  */
 
@@ -8,6 +15,7 @@
 @import "utils/mixins/layout";
 @import "utils/mixins/buttons";
 @import "utils/mixins/grid";
+@import "utils/shakeit";
 
 /**
  * Base
@@ -19,6 +27,7 @@
  * Components
  */
 
+@import "components/font-awesome";
 @import "components/ribbon";
 @import "components/slick";
 @import "components/bullet-list";
