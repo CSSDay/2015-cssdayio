@@ -71,7 +71,7 @@
     .twitter {
         position: absolute;
         left: 0;
-        top: 100px;
+        top: 220px;
         font-size: 0.6em;
         color: rgba(255, 255, 255, 0.6);
     }
@@ -79,20 +79,10 @@
 }
 
 .logo {
-    display: inline-block;
-    position: relative;
-    font-size: 3em;
-    font-family: $default-title-font-family;
-    color: rgba(255,255,255,0.5);
-
-    span.city {
-        font-size: 1rem;
-        position: absolute;
-        left: 0;
-        top: 2.7em;
-        color: #fff;
-    }
-
+    position: absolute;
+    left: 0;
+    top: 1em;
+    width: 250px;
 }
 
 label.primary-nav-toggle {
