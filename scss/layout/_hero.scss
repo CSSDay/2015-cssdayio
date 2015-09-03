@@ -23,14 +23,14 @@
             width: $default-page-width;
             margin: 0 auto;
         }
+        @include respond($desktop-breakpoint) {
+            height: 600px;
+        }
         @include respond($desktop-breakpoint + 200px) {
-            min-height: 650px;
+            height: 700px;
         }
         @include respond($desktop-breakpoint + 500px) {
-            min-height: 700px;
-        }
-        @include respond($desktop-breakpoint + 900px) {
-            min-height: 900px;
+            height: 800px;
         }
     }
 
@@ -38,19 +38,19 @@
         position: absolute;
         z-index: 2;
         right: 0;
-        top: 140px;
+        top: 220px;
         text-align: center;
+        font-size: 1em;
 
-        .title {
+        h1 {
             color: #C1DEE5;
-            font-size: 1.6em;
+            font-size: 1em;
         }
 
-        span {
-            font-size: 0.8em;
-            display: block;
-            margin-top: 10px;
-            margin-bottom: 30px;
+        h2 {
+            color: #fff;
+            font: 0.7em $default-font-family;
+            font-weight: bold;
         }
 
         .button {
@@ -62,27 +62,45 @@
             }
         }
 
-        @include respond(500px) {
+        @include respond(650px) {
             text-align: right;
+            width: 300px;
+            top: 100px;
+        }
+
+        @include respond(750px) {
+            font-size: 1.4em;
+            width: 500px; 
         }
 
     }
 
     .twitter {
+        display: none;
         position: absolute;
         left: 0;
         top: 220px;
         font-size: 0.6em;
         color: rgba(255, 255, 255, 0.6);
+
+        @include respond(650px) {
+            display: block;
+        }
     }
 
 }
 
 .logo {
     position: absolute;
-    left: 0;
     top: 1em;
+    left: 50%;
+    transform: translateX(-50%);
     width: 250px;
+
+    @include respond(650px) {
+        transform: none;
+        left: 0;
+    }
 }
 
 label.primary-nav-toggle {

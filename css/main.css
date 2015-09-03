@@ -508,6 +508,8 @@ body.slide-right {
     font-size: 0.65em; }
   .speaker-talks .speaker.fisher p {
     font-size: 0.65em; }
+  .speaker-talks .speaker.grant p {
+    font-size: 0.65em; }
   .speaker-talks .speaker.westfall p {
     font-size: 0.65em; }
   @media screen and (min-width: 600px) {
@@ -567,50 +569,69 @@ body.slide-right {
       .hero > div {
         width: 960px;
         margin: 0 auto; } }
+    @media screen and (min-width: 1050px) {
+      .hero > div {
+        height: 600px; } }
     @media screen and (min-width: 1250px) {
       .hero > div {
-        min-height: 650px; } }
+        height: 700px; } }
     @media screen and (min-width: 1550px) {
       .hero > div {
-        min-height: 700px; } }
-    @media screen and (min-width: 1950px) {
-      .hero > div {
-        min-height: 900px; } }
+        height: 800px; } }
   .hero .spash {
     position: absolute;
     z-index: 2;
     right: 0;
-    top: 140px;
-    text-align: center; }
-    .hero .spash .title {
+    top: 220px;
+    text-align: center;
+    font-size: 1em; }
+    .hero .spash h1 {
       color: #C1DEE5;
-      font-size: 1.6em; }
-    .hero .spash span {
-      font-size: 0.8em;
-      display: block;
-      margin-top: 10px;
-      margin-bottom: 30px; }
+      font-size: 1em; }
+    .hero .spash h2 {
+      color: #fff;
+      font: 0.7em 'Lato', Arial;
+      font-weight: bold; }
     .hero .spash .button {
       color: #fff; }
       .hero .spash .button:hover {
         background-color: #fff;
         border-color: #fff;
         color: #31AFCB; }
-    @media screen and (min-width: 500px) {
+    @media screen and (min-width: 650px) {
       .hero .spash {
-        text-align: right; } }
+        text-align: right;
+        width: 300px;
+        top: 100px; } }
+    @media screen and (min-width: 750px) {
+      .hero .spash {
+        font-size: 1.4em;
+        width: 500px; } }
   .hero .twitter {
+    display: none;
     position: absolute;
     left: 0;
     top: 220px;
     font-size: 0.6em;
     color: rgba(255, 255, 255, 0.6); }
+    @media screen and (min-width: 650px) {
+      .hero .twitter {
+        display: block; } }
 
 .logo {
   position: absolute;
-  left: 0;
   top: 1em;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 250px; }
+  @media screen and (min-width: 650px) {
+    .logo {
+      -webkit-transform: none;
+          -ms-transform: none;
+              transform: none;
+      left: 0; } }
 
 label.primary-nav-toggle {
   display: block;
