@@ -316,12 +316,12 @@ main.panel {
   position: relative; }
 .sponsor-types .status {
   font-size: 0.5em;
-  background-color: #bd548b;
+  background-color: #31AFCB;
   color: #fff;
   padding: 0.3em;
   position: absolute;
-  top: 33px;
-  right: -4px;
+  top: 35px;
+  right: -5px;
   border-radius: 2px;
   -webkit-transform: rotate(-10deg);
       -ms-transform: rotate(-10deg);
