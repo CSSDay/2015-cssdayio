@@ -470,7 +470,8 @@ body.slide-right {
     .speaker-talks .speaker header h1 {
       margin: 0;
       color: rgba(255, 255, 255, 0.8);
-      font-size: 1em; }
+      font-size: 1em;
+      font-family: "Lato", Arial; }
     .speaker-talks .speaker header h2 {
       margin: 0.8em 0 0 0;
       color: #fff;
