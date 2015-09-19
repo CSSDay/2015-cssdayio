@@ -1,12 +1,9 @@
-@import url(../vendor/normalize.css/normalize.css);
+@charset "UTF-8";
+/**
+ * Vendors
+ */
 @import url(../vendor/normalize.css/normalize.css);
 @import url(../vendor/slick-carousel/slick/slick.css);
-/**
- * Vendors
- */
-/**
- * Vendors
- */
 /**
  * Utils
  */
@@ -14,43 +11,33 @@
   0% {
     -webkit-transform: translate(2px, 1px) rotate(0deg);
             transform: translate(2px, 1px) rotate(0deg); }
-
   10% {
     -webkit-transform: translate(-1px, -2px) rotate(-1deg);
             transform: translate(-1px, -2px) rotate(-1deg); }
-
   20% {
     -webkit-transform: translate(-3px, 0px) rotate(1deg);
             transform: translate(-3px, 0px) rotate(1deg); }
-
   30% {
     -webkit-transform: translate(0px, 2px) rotate(0deg);
             transform: translate(0px, 2px) rotate(0deg); }
-
   40% {
     -webkit-transform: translate(1px, -1px) rotate(1deg);
             transform: translate(1px, -1px) rotate(1deg); }
-
   50% {
     -webkit-transform: translate(-1px, 2px) rotate(-1deg);
             transform: translate(-1px, 2px) rotate(-1deg); }
-
   60% {
     -webkit-transform: translate(-3px, 1px) rotate(0deg);
             transform: translate(-3px, 1px) rotate(0deg); }
-
   70% {
     -webkit-transform: translate(2px, 1px) rotate(-1deg);
             transform: translate(2px, 1px) rotate(-1deg); }
-
   80% {
     -webkit-transform: translate(-1px, -1px) rotate(1deg);
             transform: translate(-1px, -1px) rotate(1deg); }
-
   90% {
     -webkit-transform: translate(2px, 2px) rotate(0deg);
             transform: translate(2px, 2px) rotate(0deg); }
-
   100% {
     -webkit-transform: translate(1px, -2px) rotate(-1deg);
             transform: translate(1px, -2px) rotate(-1deg); } }
@@ -58,43 +45,33 @@
   0% {
     -webkit-transform: translate(2px, 1px) rotate(0deg);
             transform: translate(2px, 1px) rotate(0deg); }
-
   10% {
     -webkit-transform: translate(-1px, -2px) rotate(-1deg);
             transform: translate(-1px, -2px) rotate(-1deg); }
-
   20% {
     -webkit-transform: translate(-3px, 0px) rotate(1deg);
             transform: translate(-3px, 0px) rotate(1deg); }
-
   30% {
     -webkit-transform: translate(0px, 2px) rotate(0deg);
             transform: translate(0px, 2px) rotate(0deg); }
-
   40% {
     -webkit-transform: translate(1px, -1px) rotate(1deg);
             transform: translate(1px, -1px) rotate(1deg); }
-
   50% {
     -webkit-transform: translate(-1px, 2px) rotate(-1deg);
             transform: translate(-1px, 2px) rotate(-1deg); }
-
   60% {
     -webkit-transform: translate(-3px, 1px) rotate(0deg);
             transform: translate(-3px, 1px) rotate(0deg); }
-
   70% {
     -webkit-transform: translate(2px, 1px) rotate(-1deg);
             transform: translate(2px, 1px) rotate(-1deg); }
-
   80% {
     -webkit-transform: translate(-1px, -1px) rotate(1deg);
             transform: translate(-1px, -1px) rotate(1deg); }
-
   90% {
     -webkit-transform: translate(2px, 2px) rotate(0deg);
             transform: translate(2px, 2px) rotate(0deg); }
-
   100% {
     -webkit-transform: translate(1px, -2px) rotate(-1deg);
             transform: translate(1px, -2px) rotate(-1deg); } }
@@ -105,7 +82,7 @@
 html {
   box-sizing: border-box;
   color: #7a7a7a;
-  font: 16pt 'Lato', Arial;
+  font: 16pt "Lato", Arial;
   font-weight: 300;
   letter-spacing: 0.05em; }
 
@@ -128,7 +105,7 @@ a > i.fa {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
-  font-family: 'Changa One', Arial;
+  font-family: "Changa One", Arial;
   letter-spacing: 0.1em;
   color: #31AFCB; }
 
@@ -161,7 +138,7 @@ p {
 /****************************************
   Buttons
 *****************************************/
-.page a.button, .page .page button, .page .page button {
+.page a.button, .page button {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -175,15 +152,15 @@ p {
   border-radius: 3em;
   padding: 1em 4em;
   position: relative; }
-  .page a.button::-moz-focus-inner, .page .page button::-moz-focus-inner, .page .page button::-moz-focus-inner {
+  .page a.button::-moz-focus-inner, .page button::-moz-focus-inner {
     border: 0; }
-  .page a.button:hover, .page .page button:hover, .page .page button:hover {
+  .page a.button:hover, .page button:hover {
     outline: 0; }
-  .page a.button:hover, .page .page button:hover, .page .page button:hover {
+  .page a.button:hover, .page button:hover {
     background-color: #31AFCB;
     color: #fff;
     border-color: #31AFCB; }
-  .page a.button .fa, .page a.button .page button, .page .page a.button button {
+  .page a.button .fa, .page button .fa {
     position: absolute;
     left: 0.3em;
     top: 50%;
@@ -209,8 +186,8 @@ p {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('/vendor/font-awesome/fonts/fontawesome-webfont.eot?v=4.3.0');
-  src: url('/vendor/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('/vendor/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('/vendor/font-awesome/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('/vendor/font-awesome/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('/vendor/font-awesome/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+  src: url("/vendor/font-awesome/fonts/fontawesome-webfont.eot?v=4.3.0");
+  src: url("/vendor/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("/vendor/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), url("/vendor/font-awesome/fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("/vendor/font-awesome/fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("/vendor/font-awesome/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -226,19 +203,19 @@ p {
           transform: translate(0, 0); }
 
 .fa-twitter:before {
-  content: "\f099"; }
+  content: ""; }
 
 .fa-heart:before {
-  content: "\f004"; }
+  content: ""; }
 
 .fa-arrow-right:before {
-  content: "\f061"; }
+  content: ""; }
 
 .fa-arrow-circle-left:before {
-  content: "\f0a8"; }
+  content: ""; }
 
 .fa-check:before {
-  content: "\f00c"; }
+  content: ""; }
 
 .ribbon {
   font-size: 0.7em;
@@ -451,6 +428,7 @@ body.slide-right {
 
 .speaker-talks .slider {
   height: 90vh; }
+
 .speaker-talks .speaker {
   height: 90vh;
   outline: none;
@@ -471,7 +449,8 @@ body.slide-right {
 	 * 2. The use of `table` rather than `block` is only necessary if using
 	 *    `:before` to contain the top-margins of child elements.
 	 */ }
-    .speaker-talks .speaker header ::before, .speaker-talks .speaker header ::after {
+    .speaker-talks .speaker header ::before,
+    .speaker-talks .speaker header ::after {
       content: " ";
       /* 1 */
       display: table;
@@ -496,7 +475,7 @@ body.slide-right {
       margin: 0.8em 0 0 0;
       color: #fff;
       font-size: 0.8em;
-      font-family: 'Lato', Arial; }
+      font-family: "Lato", Arial; }
   .speaker-talks .speaker p, .speaker-talks .speaker ul.list {
     font-size: 0.5em;
     line-height: 180%;
@@ -521,6 +500,7 @@ body.slide-right {
       font-size: 1em; } }
   .speaker-talks .speaker ul.list li::before {
     color: #31AFCB; }
+
 .speaker-talks .slick-dots {
   margin: 0;
   -webkit-transform: translateX(-50px);
@@ -531,6 +511,7 @@ body.slide-right {
       -webkit-transform: translateX(0);
           -ms-transform: translateX(0);
               transform: translateX(0); } }
+
 .speaker-talks button.close {
   outline: none;
   float: right;
@@ -550,16 +531,16 @@ body.slide-right {
       display: none; } }
 
 .hero {
-  background-image: url('/images/snow-small.png'), linear-gradient(60deg, #31AFCB, #bd548b);
+  background-image: url("/images/snow-small.png"), linear-gradient(60deg, #31AFCB, #bd548b);
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: contain, cover; }
   @media screen and (min-width: 600px) {
     .hero {
-      background-image: url('/images/snow.png'), linear-gradient(60deg, #31AFCB, #bd548b); } }
+      background-image: url("/images/snow.png"), linear-gradient(60deg, #31AFCB, #bd548b); } }
   @media screen and (min-width: 1050px) {
     .hero {
-      background-image: url('/images/snow.png'), url("/images/hero.jpg"); } }
+      background-image: url("/images/snow.png"), url("/images/hero.jpg"); } }
   .hero > div {
     margin: 0 2em;
     position: relative;
@@ -590,7 +571,7 @@ body.slide-right {
       font-size: 1em; }
     .hero .spash h2 {
       color: #fff;
-      font: 0.7em 'Lato', Arial;
+      font: 0.7em "Lato", Arial;
       font-weight: bold; }
     .hero .spash .button {
       color: #fff; }
@@ -636,7 +617,7 @@ body.slide-right {
 label.primary-nav-toggle {
   display: block;
   transition: background-color 1s;
-  background-color: rgba(0, 0, 0, 0); }
+  background-color: transparent; }
   label.primary-nav-toggle .toggle-nav {
     position: fixed;
     z-index: 1000;
@@ -769,15 +750,15 @@ label.primary-nav-toggle {
     left: 0;
     right: 0;
     height: 80px;
-    background-image: url('/images/flakes.png');
+    background-image: url("/images/flakes.png");
     background-repeat: repeat-x; }
   .speakers::after {
-    background-image: url('/images/flakes-upsidedown.png');
+    background-image: url("/images/flakes-upsidedown.png");
     bottom: 0;
     top: auto; }
   @media screen and (min-width: 1050px) {
     .speakers {
-      background-image: url('/images/winter.jpg');
+      background-image: url("/images/winter.jpg");
       background-size: cover; } }
   .speakers > div {
     text-align: center; }
@@ -862,7 +843,7 @@ label.primary-nav-toggle {
             animation-timing-function: linear; }
 
 footer {
-  background: url('/images/flakes.png') repeat-x;
+  background: url("/images/flakes.png") repeat-x;
   padding: 100px 0 50px 0;
   color: #fff; }
   footer a {

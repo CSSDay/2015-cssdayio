@@ -1,7 +1,8 @@
-@import url(../vendor/normalize.css/normalize.css);
+@charset "UTF-8";
 /**
  * Vendors
  */
+@import url(../vendor/normalize.css/normalize.css);
 /**
  * Utils
  */
@@ -11,7 +12,7 @@
 html {
   box-sizing: border-box;
   color: #7a7a7a;
-  font: 16pt 'Lato', Arial;
+  font: 16pt "Lato", Arial;
   font-weight: 300;
   letter-spacing: 0.05em; }
 
@@ -34,7 +35,7 @@ a > i.fa {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
-  font-family: 'Changa One', Arial;
+  font-family: "Changa One", Arial;
   letter-spacing: 0.1em;
   color: #31AFCB; }
 
@@ -67,7 +68,7 @@ p {
 /****************************************
   Buttons
 *****************************************/
-.page a.button, .page .page button, .page .page button {
+.page a.button, .page button {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -81,15 +82,15 @@ p {
   border-radius: 3em;
   padding: 1em 4em;
   position: relative; }
-  .page a.button::-moz-focus-inner, .page .page button::-moz-focus-inner, .page .page button::-moz-focus-inner {
+  .page a.button::-moz-focus-inner, .page button::-moz-focus-inner {
     border: 0; }
-  .page a.button:hover, .page .page button:hover, .page .page button:hover {
+  .page a.button:hover, .page button:hover {
     outline: 0; }
-  .page a.button:hover, .page .page button:hover, .page .page button:hover {
+  .page a.button:hover, .page button:hover {
     background-color: #31AFCB;
     color: #fff;
     border-color: #31AFCB; }
-  .page a.button .fa, .page a.button .page button, .page .page a.button button {
+  .page a.button .fa, .page button .fa {
     position: absolute;
     left: 0.3em;
     top: 50%;
@@ -115,8 +116,8 @@ p {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('/vendor/font-awesome/fonts/fontawesome-webfont.eot?v=4.3.0');
-  src: url('/vendor/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('/vendor/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('/vendor/font-awesome/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('/vendor/font-awesome/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('/vendor/font-awesome/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+  src: url("/vendor/font-awesome/fonts/fontawesome-webfont.eot?v=4.3.0");
+  src: url("/vendor/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("/vendor/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), url("/vendor/font-awesome/fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("/vendor/font-awesome/fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("/vendor/font-awesome/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -132,19 +133,19 @@ p {
           transform: translate(0, 0); }
 
 .fa-twitter:before {
-  content: "\f099"; }
+  content: ""; }
 
 .fa-heart:before {
-  content: "\f004"; }
+  content: ""; }
 
 .fa-arrow-right:before {
-  content: "\f061"; }
+  content: ""; }
 
 .fa-arrow-circle-left:before {
-  content: "\f0a8"; }
+  content: ""; }
 
 .fa-check:before {
-  content: "\f00c"; }
+  content: ""; }
 
 .grid {
   overflow: hidden;
@@ -213,9 +214,11 @@ p {
 .sponsor-types.grid .type {
   font-weight: bold;
   color: #bd548b; }
+
 .sponsor-types.grid .price {
   float: right;
   font-weight: bold; }
+
 .sponsor-types.grid .spots {
   clear: both;
   font-size: 0.6em;
@@ -275,7 +278,7 @@ ul.list {
  */
 .page {
   padding-top: 100px;
-  background: url('/images/flakes.png') repeat-x; }
+  background: url("/images/flakes.png") repeat-x; }
 
 header > div {
   text-align: center;
@@ -284,6 +287,7 @@ header > div {
     header > div {
       width: 960px;
       margin: 0 auto; } }
+
 header h1 {
   color: #fff; }
 
@@ -314,6 +318,7 @@ main.panel {
 
 .sponsor-types .col {
   position: relative; }
+
 .sponsor-types .status {
   font-size: 0.5em;
   background-color: #31AFCB;
