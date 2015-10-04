@@ -325,8 +325,8 @@ main.panel {
   color: #fff;
   padding: 0.3em;
   position: absolute;
-  top: 35px;
-  right: -5px;
+  top: 40px;
+  right: -10px;
   border-radius: 2px;
   -webkit-transform: rotate(-10deg);
       -ms-transform: rotate(-10deg);
