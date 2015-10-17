@@ -1,0 +1,9 @@
+.promo {
+    text-align: center;
+    font-size: 0.6em;
+    padding: 0.5em;
+    background:
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        linear-gradient(90deg, $blue, $pink);
+    color: #eee;
+}
