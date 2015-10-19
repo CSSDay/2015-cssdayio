@@ -40,6 +40,7 @@ gulp.task('js', ['clean-js'], function() {
 gulp.task('sass', ['clean-css'], function () {
     return gulp.src('./scss/*.scss')
         .pipe(sass({
+            outputStyle: 'compressed',
             includePaths: ['scss'],
             errLogToConsole: true
         }))
