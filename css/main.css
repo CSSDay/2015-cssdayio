@@ -353,6 +353,8 @@ ul.list {
   padding: 0.5em;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), linear-gradient(90deg, #31AFCB, #bd548b);
   color: #eee; }
+  .promo a {
+    text-decoration: underline; }
 
 /**
  * Layout
