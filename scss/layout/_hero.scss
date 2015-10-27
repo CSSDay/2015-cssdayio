@@ -37,14 +37,17 @@
     .spash {
         position: absolute;
         z-index: 2;
+        left: 0;
         right: 0;
+
+
         top: 220px;
         text-align: center;
         font-size: 1em;
 
         h1 {
             color: #C1DEE5;
-            font-size: 1em;
+            font-size: 1.4em;
         }
 
         h2 {
@@ -64,6 +67,7 @@
 
         @include respond(650px) {
             text-align: right;
+            left: auto;
             width: 300px;
             top: 100px;
         }
