@@ -16,7 +16,7 @@
     > div {
         margin: 0 2em;
         position: relative;
-        height: 500px;
+        height: 550px;
         color: #fff;
 
         @include respond($desktop-breakpoint) {
@@ -39,7 +39,7 @@
         z-index: 2;
         left: 0;
         right: 0;
-        top: 220px;
+        top: 250px;
         text-align: center;
         font-size: 1em;
 
@@ -77,19 +77,6 @@
 
     }
 
-    .twitter {
-        display: none;
-        position: absolute;
-        left: 85px;
-        top: 220px;
-        font-size: 0.6em;
-        color: rgba(255, 255, 255, 0.6);
-
-        @include respond(650px) {
-            display: block;
-        }
-    }
-
 }
 
 .logo {
@@ -103,6 +90,19 @@
         transform: none;
         left: 0;
     }
+}
+
+.presented-by-logo {
+    position: absolute;
+    top: 10em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+
+    @include respond(650px) {
+        transform: none;
+        left: 1em;
+    }  
 }
 
 label.primary-nav-toggle {
