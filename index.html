@@ -35,7 +35,7 @@
 
 <div class="speaker-talks">
     <div class="slider">
-        <div class="speaker snook">
+        <div class="speaker snook" id="snook">
 
             <header>
                 <div class="speaker-photo">
@@ -57,7 +57,7 @@
             </p>
 
         </div>
-        <div class="speaker fisher">
+        <div class="speaker fisher" id="fisher">
 
             <header>
                 <div class="speaker-photo">
@@ -78,7 +78,7 @@
 
         </div>
 
-        <div class="speaker sauve">
+        <div class="speaker sauve" id="sauve">
 
             <header>
                 <div class="speaker-photo">
@@ -96,7 +96,7 @@
 
         </div>
 
-        <div class="speaker clark">
+        <div class="speaker clark" id="clark">
 
             <header>
                 <div class="speaker-photo">
@@ -113,7 +113,7 @@
 
         </div>
 
-        <div class="speaker grant">
+        <div class="speaker grant" id="grant">
 
             <header>
                 <div class="speaker-photo">
@@ -129,7 +129,7 @@
 
         </div>
 
-        <div class="speaker patel">
+        <div class="speaker patel" id="patel">
 
             <header>
                 <div class="speaker-photo">
@@ -145,7 +145,7 @@
 
         </div>
 
-        <div class="speaker bell">
+        <div class="speaker bell" id="bell">
 
             <header>
                 <div class="speaker-photo">
@@ -161,7 +161,7 @@
 
         </div>
 
-        <div class="speaker newton">
+        <div class="speaker newton" id="newton">
 
             <header>
                 <div class="speaker-photo">
@@ -177,7 +177,25 @@
 
         </div>
 
-        <div class="speaker westfall">
+
+        <div class="speaker davis" id="davis">
+
+            <header>
+                <div class="speaker-photo">
+                    <img src="/images/speakers/davis.jpg" alt="Larry Davis">
+                </div>
+                <div class="title">
+                    <h1>Improving performance with responsive (and responsible!) images</h1>
+                    <h2>by Larry Davis</h2>
+                </div>
+            </header>
+
+            <p>An overview of methodologies, technology choices, tricks, and compromises that let us use web components in production at Adobe.</p>
+
+        </div>
+
+
+        <div class="speaker westfall" id="westfall">
 
             <header>
                 <div class="speaker-photo">
@@ -258,104 +276,249 @@
         <section class="panel speakers" id="speakers">
             <div>
 
-
-                <div class="speaker">
-                    <div class="speaker-photo">
-                        <img src="/images/speakers/snook.jpg" alt="Jonathan Snook">
-                        <div class="ribbon">
-                            <div>Jonathan Snook</div>
-                        </div>
+                <div class="speaker-tiles">
+                    <div class="speaker">
+                        <a class="speaker-photo open-slider" data-index="1">
+                            <img src="/images/speakers/snook.jpg" alt="Jonathan Snook">
+                            <div class="ribbon">
+                                <div>Jonathan Snook</div>
+                            </div>
+                        </a>
+                        <div class="name">The Future is in pieces</div>
+                        <div class="work">Creator of SMACSS <a href="http://twitter.com/snookca"><i class="fa fa-twitter"></i> snookca</a></div>
                     </div>
-                    <div class="name">The Future is in pieces</div>
-                    <div class="work">Creator of SMACSS <a href="http://twitter.com/snookca"><i class="fa fa-twitter"></i> snookca</a></div>
+
+                    <div class="speaker">
+                        <a class="speaker-photo open-slider" data-index="2">
+                            <img src="/images/speakers/fisher.jpg" alt="Lynn Fisher">
+                            <div class="ribbon">
+                                <div>Lynn Fisher</div>
+                            </div>
+                        </a>
+                        <div class="name">Illustration with CSS</div>
+                        <div class="work">&amp;yet <a href="http://twitter.com/lynnandtonic"><i class="fa fa-twitter"></i> lynnandtonic</a></div>
+                    </div>
+
+                    <div class="speaker">
+                        <a class="speaker-photo open-slider" data-index="3">
+                            <img src="/images/speakers/sauve.jpg" alt="Chris Sauvé">
+                            <div class="ribbon">
+                                <div>Chris Sauvé</div>
+                            </div>
+                        </a>
+                        <div class="name">Content-driven Layouts with Flexbox</div>
+                        <div class="work">Shopify <a href="http://twitter.com/_lemonmade"><i class="fa fa-twitter"></i> _lemonmade</a></div>
+                    </div>
+
+                    <div class="speaker">
+                        <a class="speaker-photo open-slider" data-index="4">
+                            <img src="/images/speakers/clark.jpg" alt="David Clark">
+                            <div class="ribbon">
+                                <div>David Clark</div>
+                            </div>
+                        </a>
+                        <div class="name">Exploring New Possibilities with PostCSS</div>
+                        <div class="work"><a href="http://twitter.com/davidtheclark"><i class="fa fa-twitter"></i> davidtheclark</a></div>
+                    </div>
+
+                    <div class="speaker">
+                        <a class="speaker-photo open-slider" data-index="5">
+                            <img src="/images/speakers/grant.jpg" alt="Keith J. Grant">
+                            <div class="ribbon">
+                                <div>Keith J. Grant</div>
+                            </div>
+                        </a>
+                        <div class="name"><em>Rethinking Base Styles</em></div>
+                        <div class="work">Author of <em>CSS in Action</em><a href="http://twitter.com/keithjgrant"><i class="fa fa-twitter"></i> keithjgrant</a></div>
+                    </div>
+
+                    <div class="speaker">
+                        <a class="speaker-photo open-slider" data-index="6">
+                            <img src="/images/speakers/patel.jpg" alt="Dhruv Patel">
+                            <div class="ribbon">
+                                <div>Dhruv Patel</div>
+                            </div>
+                        </a>
+                        <div class="name">Principles in UI Animation for Developers</div>
+                        <div class="work">Founder of Convrrt <a href="http://twitter.com/sylphdesign"><i class="fa fa-twitter"></i> sylphdesign</a></div>
+                    </div>
+
+                    <div class="speaker">
+                        <a class="speaker-photo open-slider" data-index="7">
+                            <img src="/images/speakers/bell.jpg" alt="Brian Bell">
+                            <div class="ribbon">
+                                <div>Brian Bell</div>
+                            </div>
+                        </a>
+                        <div class="name">Using Sass to Avoid Turning Your Codebase into a Box of Bees</div>
+                        <div class="work">The Nerdery <a href="http://twitter.com/bbellx"><i class="fa fa-twitter"></i> bbellx</a></div>
+                    </div>
+
+                    <div class="speaker">
+                        <a class="speaker-photo open-slider" data-index="8">
+                            <img src="/images/speakers/newton.jpg" alt="David Newton">
+                            <div class="ribbon">
+                                <div>David Newton</div>
+                            </div>
+                        </a>
+                        <div class="name">Improving performance with responsive (and responsible!) images</div>
+                        <div class="work"><a href="http://twitter.com/newtron"><i class="fa fa-twitter"></i> newtron</a></div>
+                    </div>
+
+                    <div class="speaker">
+                        <a class="speaker-photo open-slider" data-index="9">
+                            <img src="/images/speakers/davis.jpg" alt="Larry Davis">
+                            <div class="ribbon">
+                                <div>Larry Davis</div>
+                            </div>
+                        </a>
+                        <div class="name">Building production-ready web components at Adobe</div>
+                        <div class="work">Adobe <a href="http://twitter.com/lazdnet"><i class="fa fa-twitter"></i> lazdnet</a></div>
+                    </div>
+
+                    <div class="speaker">
+                        <a class="speaker-photo open-slider" data-index="10">
+                            <img src="/images/speakers/westfall.jpg" alt="Brad Westfall">
+                            <div class="ribbon">
+                                <div>Brad Westfall</div>
+                            </div>
+                        </a>
+                        <div class="name">Component Independence and Layout Strategies</div>
+                        <div class="work">AZPixels <a href="http://twitter.com/bradwestfall"><i class="fa fa-twitter"></i> bradwestfall</a></div>
+                    </div>
                 </div>
 
-                <div class="speaker">
-                    <div class="speaker-photo">
-                        <img src="/images/speakers/fisher.jpg" alt="Lynn Fisher">
-                        <div class="ribbon">
-                            <div>Lynn Fisher</div>
-                        </div>
-                    </div>
-                    <div class="name">Illustration with CSS</div>
-                    <div class="work">&amp;yet <a href="http://twitter.com/lynnandtonic"><i class="fa fa-twitter"></i> lynnandtonic</a></div>
-                </div>
+            </div>
+        </section>
 
-                <div class="speaker">
-                    <div class="speaker-photo">
-                        <img src="/images/speakers/sauve.jpg" alt="Chris Sauvé">
-                        <div class="ribbon">
-                            <div>Chris Sauvé</div>
-                        </div>
-                    </div>
-                    <div class="name">Content-driven Layouts with Flexbox</div>
-                    <div class="work">Shopify <a href="http://twitter.com/_lemonmade"><i class="fa fa-twitter"></i> _lemonmade</a></div>
-                </div>
+        <section class="panel schedule" id="schedule">
+            <div>
 
-                <div class="speaker">
-                    <div class="speaker-photo">
-                        <img src="/images/speakers/clark.jpg" alt="David Clark">
-                        <div class="ribbon">
-                            <div>David Clark</div>
+                <h1>Schedule</h1>
+                
+                <div class="grid schedule">
+                    <div class="row header">
+                        <div class="col span-2">
+                            <strong>Room:</strong>
+                        </div>
+                        <div class="col span-7">
+                            <strong>Flex: 1</strong>
+                        </div>
+                        <div class="col span-7">
+                            <strong>Flex: 2</strong>
                         </div>
                     </div>
-                    <div class="name">Exploring New Possibilities with PostCSS</div>
-                    <div class="work"><a href="http://twitter.com/davidtheclark"><i class="fa fa-twitter"></i> davidtheclark</a></div>
-                </div>
-
-                <div class="speaker">
-                    <div class="speaker-photo">
-                        <img src="/images/speakers/grant.jpg" alt="Keith J. Grant">
-                        <div class="ribbon">
-                            <div>Keith J. Grant</div>
+                    <div class="row">
+                        <div class="col span-2">
+                            8:00 AM
+                        </div>
+                        <div class="col span-14">
+                            <strong>Registration</strong>Be early for the best swag gifts
                         </div>
                     </div>
-                    <div class="name"><em>Rethinking Base Styles</em></div>
-                    <div class="work">Author of <em>CSS in Action</em><a href="http://twitter.com/keithjgrant"><i class="fa fa-twitter"></i> keithjgrant</a></div>
-                </div>
-
-                <div class="speaker">
-                    <div class="speaker-photo">
-                        <img src="/images/speakers/patel.jpg" alt="Dhruv Patel">
-                        <div class="ribbon">
-                            <div>Dhruv Patel</div>
+                    <div class="row">
+                        <div class="col span-2">
+                            9:00 AM
+                        </div>
+                        <div class="col span-7">
+                            <a class="open-slider" data-index="1"><strong>The Future is in pieces</strong></a>
+                            Jonathan Snook (Keynote)
+                        </div>
+                        <div class="col span-7"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-2">
+                            10:00 AM
+                        </div>
+                        <div class="col span-7">
+                            <a class="open-slider" data-index="3"><strong>Content-driven Layouts with Flexbox</strong></a>
+                            Chris Sauve
+                        </div>
+                        <div class="col span-7">
+                            <a class="open-slider" data-index="9"><strong>Building production-ready web components at Adobe</strong></a>
+                            Larry Davis
                         </div>
                     </div>
-                    <div class="name">Principles in UI Animation for Developers</div>
-                    <div class="work">Founder of Convrrt <a href="http://twitter.com/sylphdesign"><i class="fa fa-twitter"></i> sylphdesign</a></div>
-                </div>
-
-                <div class="speaker">
-                    <div class="speaker-photo">
-                        <img src="/images/speakers/bell.jpg" alt="Brian Bell">
-                        <div class="ribbon">
-                            <div>Brian Bell</div>
+                    <div class="row">
+                        <div class="col span-2">
+                            11:00 AM
+                        </div>
+                        <div class="col span-7">
+                            <a class="open-slider" data-index="10"><strong>Component Independence and Layout Strategies</strong></a>
+                            Brad Westfall
+                        </div>
+                        <div class="col span-7">
+                            <a class="open-slider" data-index="5"><strong>Rethinking Base Styles</strong></a>
+                            Keith Grant
                         </div>
                     </div>
-                    <div class="name">Using Sass to Avoid Turning Your Codebase into a Box of Bees</div>
-                    <div class="work">The Nerdery <a href="http://twitter.com/bbellx"><i class="fa fa-twitter"></i> bbellx</a></div>
-                </div>
-
-                <div class="speaker">
-                    <div class="speaker-photo">
-                        <img src="/images/speakers/newton.jpg" alt="David Newton">
-                        <div class="ribbon">
-                            <div>David Newton</div>
+                    <div class="row">
+                        <div class="col span-2">
+                            12:00 PM
+                        </div>
+                        <div class="col span-14">
+                            <strong>Lunch</strong>
+                            Cornish Pasties Sponsored By <a href="http://twitter.com/meltmedia">@meltmedia</a>
                         </div>
                     </div>
-                    <div class="name">Improving performance with responsive (and responsible!) images</div>
-                    <div class="work"><a href="http://twitter.com/newtron"><i class="fa fa-twitter"></i> newtron</a></div>
-                </div>
-
-                <div class="speaker">
-                    <div class="speaker-photo">
-                        <img src="/images/speakers/westfall.jpg" alt="Brad Westfall">
-                        <div class="ribbon">
-                            <div>Brad Westfall</div>
+                    <div class="row">
+                        <div class="col span-2">
+                            1:00 PM
+                        </div>
+                        <div class="col span-14">
+                            <strong>CSS Freestyle Contest</strong>
+                            Sponsored By <a href="http://recruitingventures.com/">Recruiting Ventures</a>
                         </div>
                     </div>
-                    <div class="name">Component Independence and Layout Strategies</div>
-                    <div class="work">AZPixels <a href="http://twitter.com/bradwestfall"><i class="fa fa-twitter"></i> bradwestfall</a></div>
+                    <div class="row">
+                        <div class="col span-2">
+                            2:00 PM
+                        </div>
+                        <div class="col span-7">
+                            <a class="open-slider" data-index="6"><strong>Principles in UI Animation for Developers</strong></a>
+                            Dhruv Patel
+                        </div>
+                        <div class="col span-7">
+                            <a class="open-slider" data-index="4"><strong>Exploring New Possibilities with PostCSS</strong></a>
+                            David Clark
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-2">
+                            3:00 PM
+                        </div>
+                        <div class="col span-7">
+                            <a class="open-slider" data-index="7"><strong>Using Sass to Avoid Turning Your Codebase into a Box of Bees</strong></a>
+                            Brian Bell
+                        </div>
+                        <div class="col span-7">
+                            <a class="open-slider" data-index="8"><strong>Improving performance with responsive (and responsible!) images</strong></a>
+                            Dave Newton
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-2">
+                            4:00 PM
+                        </div>
+                        <div class="col span-7">
+                            <a class="open-slider" data-index="2"><strong>Illustration with CSS</strong></a>
+                            Lynn Fisher
+                        </div>
+                        <div class="col span-7"></div>
+                    </div>
+                    <div class="row header">
+                        <div class="col span-12">
+                            &lt;br class=&quot;relax chill socialize&quot;&gt;
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-2">
+                            7 PM - 9 PM
+                        </div>
+                        <div class="col span-14">
+                            <strong>Afterhours Party at Pedal Haus - Mill Ave, Tempe</strong>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -400,6 +563,7 @@
 
 </div>
 
+<script src="/build/vendors.min.js"></script>
 <script src="/build/build.min.js"></script>
 
 <script>

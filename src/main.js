@@ -35,11 +35,13 @@ $(function() {
      * Speaker Talks
      */
 
-     var speakerTalks = {
+    speakerTalks = {
 
         open: function(index) {
-            $slider.slick('slickGoTo', index, !this.isOpen());
-            $('body').addClass('slide-right');
+            if (index > 0) {
+                $slider.slick('slickGoTo', index - 1, !this.isOpen());
+                $('body').addClass('slide-right');
+            }
         },
 
         close: function() {
@@ -50,16 +52,13 @@ $(function() {
             return $('body').hasClass('slide-right');
         }
 
-     }
+    }
 
-    /**
-     * Click Speaker
-     */
-     $speaker.find('.speaker-photo').on('click', function(e) {
-        e.stopPropagation();
-        var index = $(this).parents('.speaker').index();
-        speakerTalks.open(index);
-     });
+    $('.open-slider').on('click', function() {
+        var index = parseInt($(this).data('index'));
+        speakerTalks.open(index)
+        return false
+    })
 
     /**
      * Click Page to Close Speaker Talks
@@ -67,8 +66,5 @@ $(function() {
     $('.page, .speaker-talks button.close').on('click', function() {
        if ($('body').hasClass('slide-right')) speakerTalks.close();
     });
-
-    // Discount
-    console.log("Hello! Thank you for your interest in our source code. You are hereby rewarded with a discount code for CSSDay: ilovecss");
 
 });

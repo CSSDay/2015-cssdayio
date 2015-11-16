@@ -38,6 +38,7 @@ body {
 a {
     color: $default-anchor-color;
     text-decoration: none;
+    cursor: pointer;
 }
 
 a > i.fa {
