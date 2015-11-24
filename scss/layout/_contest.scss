@@ -1,0 +1,21 @@
+.panel.contest {
+    background-color: #fff;
+
+    > div {
+        @include clearfix;
+    }
+
+    img {
+        width: 15em;
+        @include respond($desktop-breakpoint) {
+            float: left;
+        }
+    }
+
+    p {
+        @include respond($desktop-breakpoint) {
+            margin-left: 17em;
+            text-align: left;
+        }
+    }
+}
